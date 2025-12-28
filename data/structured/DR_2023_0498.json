@@ -1,0 +1,214 @@
+{
+  "case_id": "DR_2023_0498",
+  "source_file": "FORM44_Synthetic_498.pdf",
+  "extracted": {
+    "dr_no": {
+      "value": "DR/2023/0498",
+      "source": "full_text",
+      "pattern": "(DR/\\d{4}/\\d{3,5})",
+      "confidence": "medium"
+    },
+    "date_of_occurrence": {
+      "value": "01/09/2023",
+      "source": "full_text",
+      "pattern": "Date of Occurrence[:\\s]*([0-9]{1,2}/[0-9]{1,2}/[0-9]{4})",
+      "confidence": "medium"
+    },
+    "aircraft": {
+      "value": "Kestrel Patrol - AC-3231-177 at Regional Depot-A",
+      "source": "full_text",
+      "pattern": "Installation Details[:\\s]*([\\s\\S]{1,200}?)(?=\\n[a-z]\\)|\\nPart\\s*-?\\s*II|\\n$)",
+      "confidence": "high"
+    },
+    "trade": {
+      "value": "Structural",
+      "source": "full_text",
+      "pattern": "Trade[:\\s]*([A-Za-z0-9 \\-/]+?)(?=\\s*b\\)|\\s*c\\)|\\n|$)",
+      "confidence": "medium"
+    },
+    "system": {
+      "value": "Access Panels",
+      "source": "full_text",
+      "pattern": "System(?:/Sub System)?[:\\s]*([A-Za-z0-9 \\-/]+?)(?=\\s*[a-f]\\)|\\n|$)",
+      "confidence": "medium"
+    },
+    "main_assembly": {
+      "value": "Station-3 Starboard",
+      "source": "full_text",
+      "pattern": "Main Assembly[:\\s]*([A-Za-z0-9 \\-/]+?)(?=\\s*[a-f]\\)|\\n|$)",
+      "confidence": "medium"
+    },
+    "nomenclature": {
+      "value": "Access Panels Assembly Unit",
+      "source": "full_text",
+      "pattern": "Nomenclature[:\\s]*([A-Za-z0-9 \\-/]+?)(?=\\s*f\\)|\\n|$)",
+      "confidence": "high"
+    },
+    "mod_status": {
+      "value": "MOD-C",
+      "source": "full_text",
+      "pattern": "MOD Status[:\\s]*([A-Za-z0-9 \\-]+)",
+      "confidence": "low"
+    },
+    "part_no": {
+      "value": "ST-1331-J5",
+      "source": "full_text",
+      "pattern": "Part\\s*No[\\.:\\s]*([A-Za-z0-9\\-\\/]+)",
+      "confidence": "medium"
+    },
+    "serial_no": {
+      "value": "SN-9455-502",
+      "source": "full_text",
+      "pattern": "Sl\\s*No[\\.:\\s]*([A-Za-z0-9\\-\\/]+)",
+      "confidence": "medium"
+    },
+    "date_of_installation": {
+      "value": "21/09/2022",
+      "source": "full_text",
+      "pattern": "Date\\s*of\\s*Installation[:\\s]*([0-9]{1,2}/[0-9]{1,2}/[0-9]{4})",
+      "confidence": "medium"
+    },
+    "date_of_removal": {
+      "value": "03/09/2023",
+      "source": "full_text",
+      "pattern": "Date\\s*of\\s*Removal[:\\s]*([0-9]{1,2}/[0-9]{1,2}/[0-9]{4})",
+      "confidence": "medium"
+    },
+    "manufacturer": {
+      "value": "Precision Avionics Corp",
+      "source": "full_text",
+      "pattern": "Manufactur(?:er|ing Agency)[:\\s]*([A-Za-z0-9 .\\-]+?)(?=\\s*n\\)|\\n|$)",
+      "confidence": "high"
+    },
+    "manufacture_date": {
+      "value": "February 2020",
+      "source": "full_text",
+      "pattern": "Date, Month & Year[:\\s]*([A-Za-z]+\\s+[0-9]{4})",
+      "confidence": "medium"
+    },
+    "warranty": {
+      "value": "No",
+      "source": "full_text",
+      "pattern": "Whether under warranty[:\\s]*(Yes|No)",
+      "confidence": "low"
+    },
+    "amc_repair_contract": {
+      "value": "Yes",
+      "source": "full_text",
+      "pattern": "Whether under AMC[:\\s]*(Yes|No)",
+      "confidence": "low"
+    },
+    "life": {
+      "value": {
+        "raw": "1547 Hrs / 483 Cycles",
+        "hours": 1547,
+        "cycles": 483
+      },
+      "source": "full_text",
+      "pattern": "Life completed.*?:\\s*([0-9,\\.]+\\s*Hrs\\s*\\/\\s*[0-9,\\.]+\\s*Cycles)",
+      "confidence": "high"
+    },
+    "defect_category": {
+      "value": "Major",
+      "source": "full_text",
+      "pattern": "Defect Category[:\\s]*([A-Za-z \\-]+)",
+      "confidence": "low"
+    },
+    "defect_observed": {
+      "value": "Paint coating disbondment. Defect found during scheduled maintenance.",
+      "source": "full_text",
+      "pattern": "Defect Observed[:\\s]*([\\s\\S]{1,400}?)(?=\\nPart\\s*-?\\s*IV|\\n[a-z]\\)|$)",
+      "confidence": "high"
+    },
+    "root_cause": {
+      "value": "Contamination ingress through damaged seal assembly",
+      "source": "full_text",
+      "pattern": "Root Cause Analysis[:\\s]*([\\s\\S]{1,400}?)(?=(?:[\\s\\r\\n]*)[a-z]\\)|\\nFindings|Corrective|Preventive|$)",
+      "confidence": "high"
+    },
+    "findings": {
+      "value": "Detailed investigation conducted on the defective Access Panels component. Testing confirmed performance below acceptable limits.",
+      "source": "full_text",
+      "pattern": "Findings\\s*/\\s*Conclusions[:\\s]*([\\s\\S]{1,600}?)(?=(?:[\\s\\r\\n]*)[a-z]\\)|\\nCorrective|Preventive|\\nPart\\s*-?\\s*V|$)",
+      "confidence": "high"
+    },
+    "corrective_action": {
+      "value": "Adjust calibration settings to manufacturer specifications",
+      "source": "full_text",
+      "pattern": "Corrective Action[:\\s]*([\\s\\S]{1,400}?)(?=(?:[\\s\\r\\n]*)ii\\.[\\s\\r\\n]|(?:[\\s\\r\\n]*)Preventive Action|(?:[\\s\\r\\n]*)[a-z]\\)|\\nPart\\s*-?\\s*V|$)",
+      "confidence": "high"
+    },
+    "preventive_action": {
+      "value": "Establish periodic calibration schedule",
+      "source": "full_text",
+      "pattern": "Preventive Action[:\\s]*([\\s\\S]{1,400}?)(?=(?:[\\s\\r\\n]*)[a-z]\\)|\\nPart\\s*-?\\s*V|\\nFindings|$)",
+      "confidence": "high"
+    },
+    "remarks_investigation": {
+      "value": "Thorough investigation completed. Preventive actions recommended.",
+      "source": "full_text",
+      "pattern": "Part\\s*-?\\s*IV[\\s\\S]*?Remarks[:\\s]*([\\s\\S]{1,600}?)(?=\\nPart\\s*-?\\s*V|$)",
+      "confidence": "high"
+    },
+    "remarks_design": {
+      "value": "Detailed analysis indicates design margins are adequate. Failure attributed to operational factors. Concur with findings. Date: 30/09/2023 Authorized Signatory of Design: Gp Capt V.S. Pillai",
+      "source": "full_text",
+      "pattern": "Part\\s*-?\\s*V[\\s\\S]*?Remarks(?:\\s*by\\s*Design)?[:\\s]*([\\s\\S]{1,600}?)(?=\\nPart\\s*-?\\s*VI|$)",
+      "confidence": "high"
+    },
+    "remarks_quality": {
+      "value": "Dept. Quality assurance review completed. Recommend enhanced incoming inspection criteria for this component type. Date: 03/10/2023 Signature: Dr. A.K. Sharma",
+      "source": "full_text",
+      "pattern": "Part\\s*-?\\s*VI[\\s\\S]*?Remarks(?:\\s*by\\s*Quality)?[:\\s]*([\\s\\S]{1,600}?)(?=\\nPart\\s*-?\\s*VII|$)",
+      "confidence": "high"
+    },
+    "remarks_user": {
+      "value": "(Project):(if applicable) User feedback incorporated. Recommend enhanced crew training on system operation and limitations. Date: 05/10/2023 Signature: Eng. R.P. Singh",
+      "source": "full_text",
+      "pattern": "Part\\s*-?\\s*VII[\\s\\S]*?Remarks(?:\\s*by\\s*User|Project)?[:\\s]*([\\s\\S]{1,600}?)(?=\\nPart\\s*-?\\s*VIII|$)",
+      "confidence": "high"
+    },
+    "remarks_ordaqa": {
+      "value": "(Quality Aspects) Quality assurance framework assessed. Investigation process followed established protocols. Findings are valid. Date: 06/10/2023 Signature: Wg Cdr D.S. Nair",
+      "source": "full_text",
+      "pattern": "Part\\s*-?\\s*VIII[\\s\\S]*?Remarks(?:\\s*by\\s*ORDAQA)?[:\\s]*([\\s\\S]{1,600}?)(?=\\nPart\\s*-?\\s*IX|$)",
+      "confidence": "high"
+    },
+    "remarks_cemilac": {
+      "value": "/ RCMA (Design Aspects) Airworthiness implications assessed. Recommend issuance of technical directive for fleet-wide compliance. Date: 07/10/2023 Signature: Wg Cdr M.S. Reddy",
+      "source": "full_text",
+      "pattern": "Part\\s*-?\\s*IX[\\s\\S]*?Remarks(?:\\s*by\\s*CEMILAC|CEMILAC\\s*/\\s*RCMA)?[:\\s]*([\\s\\S]{1,600}?)(?=\\nEdition|$)",
+      "confidence": "high"
+    },
+    "date_component_received": {
+      "value": "06/09/2023",
+      "source": "partII",
+      "pattern": "partII_dcr",
+      "confidence": "high"
+    },
+    "approvals": {
+      "design": {
+        "name": "Gp Capt V.S. Pillai",
+        "date": "2023-09-30"
+      },
+      "quality": {
+        "name": "Dr. A.K. Sharma",
+        "date": "2023-10-03"
+      },
+      "user": {
+        "name": "Eng. R.P. Singh",
+        "date": "2023-10-05"
+      },
+      "ordaqa": {
+        "name": "Wg Cdr D.S. Nair",
+        "date": "2023-10-06"
+      },
+      "cemilac": {
+        "name": "Wg Cdr M.S. Reddy",
+        "date": "2023-10-07"
+      }
+    }
+  },
+  "raw_text_snippet": "--- Page 1 (pdf_text) ---\nCentre for Military Airworthiness and Certification\nFORM - 44\nDEFECT INVESTIGATION REPORT FORMAT\nIn accordance with IMTAR  21, Subpart C1, 21.C1.18, Subpart C2, 21.C2.9 & Subpart C3, 21.C3.1.20.\nPart - I (Reference): Incident /Accident/ Snag / Explosive\na) Defect Report (DR) No: DR/2023/0498 b) Date of Occurrence: 01/09/2023\nc) Installation Details: Kestrel Patrol - AC-3231-177 at\nRegional Depot-A\nPart - II: (Details of Defective Component)\na) Trade: Structural b) Date Component 06/09/2023\nReceived:\nc) System/Sub System: Access Panels d) Main Assembly: Station-3 Starboard\ne) Nomenclature: Access Panels Assembly Unit f) MOD Status: MOD-C\ng) Part No.: ST-1331-J5 h) Sl No.: SN-9455-502\ni) Firmware Version: Not Applicable j) Software Version: Not Applicable\nk) Date of Installation: 21/09/2022 l) Date of Removal: 03/09/2023\nPg No: 130 Ln No: 30 Pg No: 136 Ln No: 23\nm) Manufacturing Agency: Precision Avionics Corp n) Date, Month & Year February 2020\nof Manufacturing:\no) Whether under warranty: No p) Whether under AMC Yes\n/ Repair Contract:\nq) Life completed since New: 1547 Hrs / 483 Cycles\n\n--- Page 2 (pdf_text) ---\nCentre for Military Airworthiness and Certification\nFORM - 44\nDEFECT INVESTIGATION REPORT FORMAT\nPart - III: (Defect Details)\na) Defect Category: Major\nb) Defect Observed: Paint coating disbondment. Defect found during scheduled maintenance.\nPart IV: Investigation: (Details of Examination including previous similar Defects)\na) Root Cause Analysis: Contamination ingress through damaged seal assembly\nb) Findings / Conclusions: Detailed investigation conducted on the defective Access Panels component. Testing\nconfirmed performance below acceptable limits.\nc) Remedial Measures Adjust calibration settings to manufacturer specifications\ni. Corrective Action:\nii. Preventive Action: Establish periodic calibration schedule\nd) Attributable Code: M - Other Reasons\nRemarks: Thorough investigation completed. Preventive actions recommended.\nPart V...",
+  "processed_ts": "2025-12-12T16:55:33.580795"
+}

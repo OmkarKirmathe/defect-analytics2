@@ -1,0 +1,214 @@
+{
+  "case_id": "DR_2024_0202",
+  "source_file": "FORM44_Synthetic_202.pdf",
+  "extracted": {
+    "dr_no": {
+      "value": "DR/2024/0202",
+      "source": "full_text",
+      "pattern": "(DR/\\d{4}/\\d{3,5})",
+      "confidence": "medium"
+    },
+    "date_of_occurrence": {
+      "value": "27/01/2023",
+      "source": "full_text",
+      "pattern": "Date of Occurrence[:\\s]*([0-9]{1,2}/[0-9]{1,2}/[0-9]{4})",
+      "confidence": "medium"
+    },
+    "aircraft": {
+      "value": "Medusa Strike - AC-2551-743 at Central Command Hub",
+      "source": "full_text",
+      "pattern": "Installation Details[:\\s]*([\\s\\S]{1,200}?)(?=\\n[a-z]\\)|\\nPart\\s*-?\\s*II|\\n$)",
+      "confidence": "high"
+    },
+    "trade": {
+      "value": "Propulsion",
+      "source": "full_text",
+      "pattern": "Trade[:\\s]*([A-Za-z0-9 \\-/]+?)(?=\\s*b\\)|\\s*c\\)|\\n|$)",
+      "confidence": "medium"
+    },
+    "system": {
+      "value": "Fuel Injection",
+      "source": "full_text",
+      "pattern": "System(?:/Sub System)?[:\\s]*([A-Za-z0-9 \\-/]+?)(?=\\s*[a-f]\\)|\\n|$)",
+      "confidence": "medium"
+    },
+    "main_assembly": {
+      "value": "Wing Root Starboard",
+      "source": "full_text",
+      "pattern": "Main Assembly[:\\s]*([A-Za-z0-9 \\-/]+?)(?=\\s*[a-f]\\)|\\n|$)",
+      "confidence": "medium"
+    },
+    "nomenclature": {
+      "value": "Fuel Injection Assembly Unit",
+      "source": "full_text",
+      "pattern": "Nomenclature[:\\s]*([A-Za-z0-9 \\-/]+?)(?=\\s*f\\)|\\n|$)",
+      "confidence": "high"
+    },
+    "mod_status": {
+      "value": "Upgraded",
+      "source": "full_text",
+      "pattern": "MOD Status[:\\s]*([A-Za-z0-9 \\-]+)",
+      "confidence": "medium"
+    },
+    "part_no": {
+      "value": "PR-5347-W2",
+      "source": "full_text",
+      "pattern": "Part\\s*No[\\.:\\s]*([A-Za-z0-9\\-\\/]+)",
+      "confidence": "medium"
+    },
+    "serial_no": {
+      "value": "SN-5104-476",
+      "source": "full_text",
+      "pattern": "Sl\\s*No[\\.:\\s]*([A-Za-z0-9\\-\\/]+)",
+      "confidence": "medium"
+    },
+    "date_of_installation": {
+      "value": "19/12/2021",
+      "source": "full_text",
+      "pattern": "Date\\s*of\\s*Installation[:\\s]*([0-9]{1,2}/[0-9]{1,2}/[0-9]{4})",
+      "confidence": "medium"
+    },
+    "date_of_removal": {
+      "value": "03/02/2023",
+      "source": "full_text",
+      "pattern": "Date\\s*of\\s*Removal[:\\s]*([0-9]{1,2}/[0-9]{1,2}/[0-9]{4})",
+      "confidence": "medium"
+    },
+    "manufacturer": {
+      "value": "Epsilon Avionics Ltd",
+      "source": "full_text",
+      "pattern": "Manufactur(?:er|ing Agency)[:\\s]*([A-Za-z0-9 .\\-]+?)(?=\\s*n\\)|\\n|$)",
+      "confidence": "medium"
+    },
+    "manufacture_date": {
+      "value": "September 2017",
+      "source": "full_text",
+      "pattern": "Date, Month & Year[:\\s]*([A-Za-z]+\\s+[0-9]{4})",
+      "confidence": "medium"
+    },
+    "warranty": {
+      "value": "Yes",
+      "source": "full_text",
+      "pattern": "Whether under warranty[:\\s]*(Yes|No)",
+      "confidence": "low"
+    },
+    "amc_repair_contract": {
+      "value": "Yes",
+      "source": "full_text",
+      "pattern": "Whether under AMC[:\\s]*(Yes|No)",
+      "confidence": "low"
+    },
+    "life": {
+      "value": {
+        "raw": "3396 Hrs / 488 Cycles",
+        "hours": 3396,
+        "cycles": 488
+      },
+      "source": "full_text",
+      "pattern": "Life completed.*?:\\s*([0-9,\\.]+\\s*Hrs\\s*\\/\\s*[0-9,\\.]+\\s*Cycles)",
+      "confidence": "high"
+    },
+    "defect_category": {
+      "value": "Mission Critical",
+      "source": "full_text",
+      "pattern": "Defect Category[:\\s]*([A-Za-z \\-]+)",
+      "confidence": "medium"
+    },
+    "defect_observed": {
+      "value": "Compressor stall during acceleration. Issue identified during pre-flight checks.",
+      "source": "full_text",
+      "pattern": "Defect Observed[:\\s]*([\\s\\S]{1,400}?)(?=\\nPart\\s*-?\\s*IV|\\n[a-z]\\)|$)",
+      "confidence": "high"
+    },
+    "root_cause": {
+      "value": "Vibration induced loosening of mechanical fasteners",
+      "source": "full_text",
+      "pattern": "Root Cause Analysis[:\\s]*([\\s\\S]{1,400}?)(?=(?:[\\s\\r\\n]*)[a-z]\\)|\\nFindings|Corrective|Preventive|$)",
+      "confidence": "high"
+    },
+    "findings": {
+      "value": "Detailed investigation conducted on the defective Fuel Injection component. Testing confirmed performance below acceptable limits.",
+      "source": "full_text",
+      "pattern": "Findings\\s*/\\s*Conclusions[:\\s]*([\\s\\S]{1,600}?)(?=(?:[\\s\\r\\n]*)[a-z]\\)|\\nCorrective|Preventive|\\nPart\\s*-?\\s*V|$)",
+      "confidence": "high"
+    },
+    "corrective_action": {
+      "value": "Implement enhanced testing protocol before component installation",
+      "source": "full_text",
+      "pattern": "Corrective Action[:\\s]*([\\s\\S]{1,400}?)(?=(?:[\\s\\r\\n]*)ii\\.[\\s\\r\\n]|(?:[\\s\\r\\n]*)Preventive Action|(?:[\\s\\r\\n]*)[a-z]\\)|\\nPart\\s*-?\\s*V|$)",
+      "confidence": "high"
+    },
+    "preventive_action": {
+      "value": "Issue technical bulletin to all operators",
+      "source": "full_text",
+      "pattern": "Preventive Action[:\\s]*([\\s\\S]{1,400}?)(?=(?:[\\s\\r\\n]*)[a-z]\\)|\\nPart\\s*-?\\s*V|\\nFindings|$)",
+      "confidence": "high"
+    },
+    "remarks_investigation": {
+      "value": "Detailed examination conducted. Corrective measures implemented.",
+      "source": "full_text",
+      "pattern": "Part\\s*-?\\s*IV[\\s\\S]*?Remarks[:\\s]*([\\s\\S]{1,600}?)(?=\\nPart\\s*-?\\s*V|$)",
+      "confidence": "high"
+    },
+    "remarks_design": {
+      "value": "Design review completed. No design modification required. Component replacement as per maintenance manual is adequate. Date: 07/03/2023 Authorized Signatory of Design: Sqn Ldr V.K. Patel",
+      "source": "full_text",
+      "pattern": "Part\\s*-?\\s*V[\\s\\S]*?Remarks(?:\\s*by\\s*Design)?[:\\s]*([\\s\\S]{1,600}?)(?=\\nPart\\s*-?\\s*VI|$)",
+      "confidence": "high"
+    },
+    "remarks_quality": {
+      "value": "Dept. Quality assurance review completed. Recommend enhanced incoming inspection criteria for this component type. Date: 09/03/2023 Signature: Dr. P.L. Mehta",
+      "source": "full_text",
+      "pattern": "Part\\s*-?\\s*VI[\\s\\S]*?Remarks(?:\\s*by\\s*Quality)?[:\\s]*([\\s\\S]{1,600}?)(?=\\nPart\\s*-?\\s*VII|$)",
+      "confidence": "high"
+    },
+    "remarks_user": {
+      "value": "(Project):(if applicable) User feedback incorporated. Recommend enhanced crew training on system operation and limitations. Date: 10/03/2023 Signature: Wg Cdr M.S. Reddy",
+      "source": "full_text",
+      "pattern": "Part\\s*-?\\s*VII[\\s\\S]*?Remarks(?:\\s*by\\s*User|Project)?[:\\s]*([\\s\\S]{1,600}?)(?=\\nPart\\s*-?\\s*VIII|$)",
+      "confidence": "high"
+    },
+    "remarks_ordaqa": {
+      "value": "(Quality Aspects) Quality oversight review completed. Recommend monitoring effectiveness of implemented preventive actions. Date: 14/03/2023 Signature: Air Cmde R.K. Joshi",
+      "source": "full_text",
+      "pattern": "Part\\s*-?\\s*VIII[\\s\\S]*?Remarks(?:\\s*by\\s*ORDAQA)?[:\\s]*([\\s\\S]{1,600}?)(?=\\nPart\\s*-?\\s*IX|$)",
+      "confidence": "high"
+    },
+    "remarks_cemilac": {
+      "value": "/ RCMA (Design Aspects) Design authority review completed. Recommend continued airworthiness monitoring of affected component type. Date: 17/03/2023 Signature: Eng. K.N. Iyer",
+      "source": "full_text",
+      "pattern": "Part\\s*-?\\s*IX[\\s\\S]*?Remarks(?:\\s*by\\s*CEMILAC|CEMILAC\\s*/\\s*RCMA)?[:\\s]*([\\s\\S]{1,600}?)(?=\\nEdition|$)",
+      "confidence": "high"
+    },
+    "date_component_received": {
+      "value": "06/02/2023",
+      "source": "partII",
+      "pattern": "partII_dcr",
+      "confidence": "high"
+    },
+    "approvals": {
+      "design": {
+        "name": "Sqn Ldr V.K. Patel",
+        "date": "2023-03-07"
+      },
+      "quality": {
+        "name": "Dr. P.L. Mehta",
+        "date": "2023-03-09"
+      },
+      "user": {
+        "name": "Wg Cdr M.S. Reddy",
+        "date": "2023-03-10"
+      },
+      "ordaqa": {
+        "name": "Air Cmde R.K. Joshi",
+        "date": "2023-03-14"
+      },
+      "cemilac": {
+        "name": "Eng. K.N. Iyer",
+        "date": "2023-03-17"
+      }
+    }
+  },
+  "raw_text_snippet": "--- Page 1 (pdf_text) ---\nCentre for Military Airworthiness and Certification\nFORM - 44\nDEFECT INVESTIGATION REPORT FORMAT\nIn accordance with IMTAR  21, Subpart C1, 21.C1.18, Subpart C2, 21.C2.9 & Subpart C3, 21.C3.1.20.\nPart - I (Reference): Incident /Accident/ Snag / Explosive\na) Defect Report (DR) No: DR/2024/0202 b) Date of Occurrence: 27/01/2023\nc) Installation Details: Medusa Strike - AC-2551-743 at\nCentral Command Hub\nPart - II: (Details of Defective Component)\na) Trade: Propulsion b) Date Component 06/02/2023\nReceived:\nc) System/Sub System: Fuel Injection d) Main Assembly: Wing Root Starboard\ne) Nomenclature: Fuel Injection Assembly Unit f) MOD Status: Upgraded\ng) Part No.: PR-5347-W2 h) Sl No.: SN-5104-476\ni) Firmware Version: Not Applicable j) Software Version: Not Applicable\nk) Date of Installation: 19/12/2021 l) Date of Removal: 03/02/2023\nPg No: 146 Ln No: 24 Pg No: 10 Ln No: 4\nm) Manufacturing Agency: Epsilon Avionics Ltd n) Date, Month & Year September 2017\nof Manufacturing:\no) Whether under warranty: Yes p) Whether under AMC Yes\n/ Repair Contract:\nq) Life completed since New: 3396 Hrs / 488 Cycles\n\n--- Page 2 (pdf_text) ---\nCentre for Military Airworthiness and Certification\nFORM - 44\nDEFECT INVESTIGATION REPORT FORMAT\nPart - III: (Defect Details)\na) Defect Category: Mission Critical\nb) Defect Observed: Compressor stall during acceleration. Issue identified during pre-flight checks.\nPart IV: Investigation: (Details of Examination including previous similar Defects)\na) Root Cause Analysis: Vibration induced loosening of mechanical fasteners\nb) Findings / Conclusions: Detailed investigation conducted on the defective Fuel Injection component. Testing\nconfirmed performance below acceptable limits.\nc) Remedial Measures Implement enhanced testing protocol before component installation\ni. Corrective Action:\nii. Preventive Action: Issue technical bulletin to all operators\nd) Attributable Code: F - Failure/ageing/Corrosion/Material Failure\nRemarks: Detailed...",
+  "processed_ts": "2025-12-12T16:54:57.880466"
+}

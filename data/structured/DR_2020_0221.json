@@ -1,0 +1,214 @@
+{
+  "case_id": "DR_2020_0221",
+  "source_file": "FORM44_Synthetic_221.pdf",
+  "extracted": {
+    "dr_no": {
+      "value": "DR/2020/0221",
+      "source": "full_text",
+      "pattern": "(DR/\\d{4}/\\d{3,5})",
+      "confidence": "medium"
+    },
+    "date_of_occurrence": {
+      "value": "08/09/2024",
+      "source": "full_text",
+      "pattern": "Date of Occurrence[:\\s]*([0-9]{1,2}/[0-9]{1,2}/[0-9]{4})",
+      "confidence": "medium"
+    },
+    "aircraft": {
+      "value": "Skyhawk Fighter - AC-5470-396 at Central Command Hub",
+      "source": "full_text",
+      "pattern": "Installation Details[:\\s]*([\\s\\S]{1,200}?)(?=\\n[a-z]\\)|\\nPart\\s*-?\\s*II|\\n$)",
+      "confidence": "high"
+    },
+    "trade": {
+      "value": "Mechanical",
+      "source": "full_text",
+      "pattern": "Trade[:\\s]*([A-Za-z0-9 \\-/]+?)(?=\\s*b\\)|\\s*c\\)|\\n|$)",
+      "confidence": "medium"
+    },
+    "system": {
+      "value": "Cargo Handling",
+      "source": "full_text",
+      "pattern": "System(?:/Sub System)?[:\\s]*([A-Za-z0-9 \\-/]+?)(?=\\s*[a-f]\\)|\\n|$)",
+      "confidence": "medium"
+    },
+    "main_assembly": {
+      "value": "Tail Section",
+      "source": "full_text",
+      "pattern": "Main Assembly[:\\s]*([A-Za-z0-9 \\-/]+?)(?=\\s*[a-f]\\)|\\n|$)",
+      "confidence": "medium"
+    },
+    "nomenclature": {
+      "value": "Cargo Handling Assembly Unit",
+      "source": "full_text",
+      "pattern": "Nomenclature[:\\s]*([A-Za-z0-9 \\-/]+?)(?=\\s*f\\)|\\n|$)",
+      "confidence": "high"
+    },
+    "mod_status": {
+      "value": "Modified",
+      "source": "full_text",
+      "pattern": "MOD Status[:\\s]*([A-Za-z0-9 \\-]+)",
+      "confidence": "medium"
+    },
+    "part_no": {
+      "value": "MC-5198-Y5",
+      "source": "full_text",
+      "pattern": "Part\\s*No[\\.:\\s]*([A-Za-z0-9\\-\\/]+)",
+      "confidence": "medium"
+    },
+    "serial_no": {
+      "value": "SN-6303-250",
+      "source": "full_text",
+      "pattern": "Sl\\s*No[\\.:\\s]*([A-Za-z0-9\\-\\/]+)",
+      "confidence": "medium"
+    },
+    "date_of_installation": {
+      "value": "10/02/2021",
+      "source": "full_text",
+      "pattern": "Date\\s*of\\s*Installation[:\\s]*([0-9]{1,2}/[0-9]{1,2}/[0-9]{4})",
+      "confidence": "medium"
+    },
+    "date_of_removal": {
+      "value": "14/09/2024",
+      "source": "full_text",
+      "pattern": "Date\\s*of\\s*Removal[:\\s]*([0-9]{1,2}/[0-9]{1,2}/[0-9]{4})",
+      "confidence": "medium"
+    },
+    "manufacturer": {
+      "value": "Zenith Defense Tech",
+      "source": "full_text",
+      "pattern": "Manufactur(?:er|ing Agency)[:\\s]*([A-Za-z0-9 .\\-]+?)(?=\\s*n\\)|\\n|$)",
+      "confidence": "medium"
+    },
+    "manufacture_date": {
+      "value": "May 2020",
+      "source": "full_text",
+      "pattern": "Date, Month & Year[:\\s]*([A-Za-z]+\\s+[0-9]{4})",
+      "confidence": "medium"
+    },
+    "warranty": {
+      "value": "Yes",
+      "source": "full_text",
+      "pattern": "Whether under warranty[:\\s]*(Yes|No)",
+      "confidence": "low"
+    },
+    "amc_repair_contract": {
+      "value": "No",
+      "source": "full_text",
+      "pattern": "Whether under AMC[:\\s]*(Yes|No)",
+      "confidence": "low"
+    },
+    "life": {
+      "value": {
+        "raw": "3310 Hrs / 1016 Cycles",
+        "hours": 3310,
+        "cycles": 1016
+      },
+      "source": "full_text",
+      "pattern": "Life completed.*?:\\s*([0-9,\\.]+\\s*Hrs\\s*\\/\\s*[0-9,\\.]+\\s*Cycles)",
+      "confidence": "high"
+    },
+    "defect_category": {
+      "value": "Safety Critical",
+      "source": "full_text",
+      "pattern": "Defect Category[:\\s]*([A-Za-z \\-]+)",
+      "confidence": "medium"
+    },
+    "defect_observed": {
+      "value": "Door latch mechanism failure to engage. Malfunction reported by flight crew.",
+      "source": "full_text",
+      "pattern": "Defect Observed[:\\s]*([\\s\\S]{1,400}?)(?=\\nPart\\s*-?\\s*IV|\\n[a-z]\\)|$)",
+      "confidence": "high"
+    },
+    "root_cause": {
+      "value": "Wear beyond serviceable limits due to extended operational hours",
+      "source": "full_text",
+      "pattern": "Root Cause Analysis[:\\s]*([\\s\\S]{1,400}?)(?=(?:[\\s\\r\\n]*)[a-z]\\)|\\nFindings|Corrective|Preventive|$)",
+      "confidence": "high"
+    },
+    "findings": {
+      "value": "Detailed investigation conducted on the defective Cargo Handling component. Physical examination revealed signs of wear and degradation.",
+      "source": "full_text",
+      "pattern": "Findings\\s*/\\s*Conclusions[:\\s]*([\\s\\S]{1,600}?)(?=(?:[\\s\\r\\n]*)[a-z]\\)|\\nCorrective|Preventive|\\nPart\\s*-?\\s*V|$)",
+      "confidence": "high"
+    },
+    "corrective_action": {
+      "value": "Conduct detailed inspection of all similar components in fleet",
+      "source": "full_text",
+      "pattern": "Corrective Action[:\\s]*([\\s\\S]{1,400}?)(?=(?:[\\s\\r\\n]*)ii\\.[\\s\\r\\n]|(?:[\\s\\r\\n]*)Preventive Action|(?:[\\s\\r\\n]*)[a-z]\\)|\\nPart\\s*-?\\s*V|$)",
+      "confidence": "high"
+    },
+    "preventive_action": {
+      "value": "Conduct fleet-wide inspection campaign",
+      "source": "full_text",
+      "pattern": "Preventive Action[:\\s]*([\\s\\S]{1,400}?)(?=(?:[\\s\\r\\n]*)[a-z]\\)|\\nPart\\s*-?\\s*V|\\nFindings|$)",
+      "confidence": "high"
+    },
+    "remarks_investigation": {
+      "value": "Comprehensive analysis performed. Root cause identified and verified.",
+      "source": "full_text",
+      "pattern": "Part\\s*-?\\s*IV[\\s\\S]*?Remarks[:\\s]*([\\s\\S]{1,600}?)(?=\\nPart\\s*-?\\s*V|$)",
+      "confidence": "high"
+    },
+    "remarks_design": {
+      "value": "Design assessment confirms component operated within specified limits. Recommend enhanced inspection protocol. Date: 05/10/2024 Authorized Signatory of Design: Sqn Ldr V.K. Patel",
+      "source": "full_text",
+      "pattern": "Part\\s*-?\\s*V[\\s\\S]*?Remarks(?:\\s*by\\s*Design)?[:\\s]*([\\s\\S]{1,600}?)(?=\\nPart\\s*-?\\s*VI|$)",
+      "confidence": "high"
+    },
+    "remarks_quality": {
+      "value": "Dept. Component inspection records verified. All quality parameters were within acceptable limits during manufacturing. Date: 07/10/2024 Signature: Air Cmde R.K. Joshi",
+      "source": "full_text",
+      "pattern": "Part\\s*-?\\s*VI[\\s\\S]*?Remarks(?:\\s*by\\s*Quality)?[:\\s]*([\\s\\S]{1,600}?)(?=\\nPart\\s*-?\\s*VII|$)",
+      "confidence": "high"
+    },
+    "remarks_user": {
+      "value": "(Project):(if applicable) Fleet experience reviewed. Similar occurrences noted on other platforms. Support fleet-wide inspection. Date: 07/10/2024 Signature: Gp Capt N.R. Kumar",
+      "source": "full_text",
+      "pattern": "Part\\s*-?\\s*VII[\\s\\S]*?Remarks(?:\\s*by\\s*User|Project)?[:\\s]*([\\s\\S]{1,600}?)(?=\\nPart\\s*-?\\s*VIII|$)",
+      "confidence": "high"
+    },
+    "remarks_ordaqa": {
+      "value": "(Quality Aspects) From quality standpoint, root cause analysis is thorough. Corrective measures are appropriate. Concur. Date: 09/10/2024 Signature: Eng. T.R. Menon",
+      "source": "full_text",
+      "pattern": "Part\\s*-?\\s*VIII[\\s\\S]*?Remarks(?:\\s*by\\s*ORDAQA)?[:\\s]*([\\s\\S]{1,600}?)(?=\\nPart\\s*-?\\s*IX|$)",
+      "confidence": "high"
+    },
+    "remarks_cemilac": {
+      "value": "/ RCMA (Design Aspects) From regulatory standpoint, investigation meets required standards. Approve proposed corrective actions. Date: 13/10/2024 Signature: Eng. T.R. Menon",
+      "source": "full_text",
+      "pattern": "Part\\s*-?\\s*IX[\\s\\S]*?Remarks(?:\\s*by\\s*CEMILAC|CEMILAC\\s*/\\s*RCMA)?[:\\s]*([\\s\\S]{1,600}?)(?=\\nEdition|$)",
+      "confidence": "high"
+    },
+    "date_component_received": {
+      "value": "15/09/2024",
+      "source": "partII",
+      "pattern": "partII_dcr",
+      "confidence": "high"
+    },
+    "approvals": {
+      "design": {
+        "name": "Sqn Ldr V.K. Patel",
+        "date": "2024-10-05"
+      },
+      "quality": {
+        "name": "Air Cmde R.K. Joshi",
+        "date": "2024-10-07"
+      },
+      "user": {
+        "name": "Gp Capt N.R. Kumar",
+        "date": "2024-10-07"
+      },
+      "ordaqa": {
+        "name": "Eng. T.R. Menon",
+        "date": "2024-10-09"
+      },
+      "cemilac": {
+        "name": "Eng. T.R. Menon",
+        "date": "2024-10-13"
+      }
+    }
+  },
+  "raw_text_snippet": "--- Page 1 (pdf_text) ---\nCentre for Military Airworthiness and Certification\nFORM - 44\nDEFECT INVESTIGATION REPORT FORMAT\nIn accordance with IMTAR  21, Subpart C1, 21.C1.18, Subpart C2, 21.C2.9 & Subpart C3, 21.C3.1.20.\nPart - I (Reference): Incident /Accident/ Snag / Explosive\na) Defect Report (DR) No: DR/2020/0221 b) Date of Occurrence: 08/09/2024\nc) Installation Details: Skyhawk Fighter - AC-5470-396 at\nCentral Command Hub\nPart - II: (Details of Defective Component)\na) Trade: Mechanical b) Date Component 15/09/2024\nReceived:\nc) System/Sub System: Cargo Handling d) Main Assembly: Tail Section\ne) Nomenclature: Cargo Handling Assembly Unit f) MOD Status: Modified\ng) Part No.: MC-5198-Y5 h) Sl No.: SN-6303-250\ni) Firmware Version: Not Applicable j) Software Version: Not Applicable\nk) Date of Installation: 10/02/2021 l) Date of Removal: 14/09/2024\nPg No: 71 Ln No: 6 Pg No: 132 Ln No: 10\nm) Manufacturing Agency: Zenith Defense Tech n) Date, Month & Year May 2020\nof Manufacturing:\no) Whether under warranty: Yes p) Whether under AMC No\n/ Repair Contract:\nq) Life completed since New: 3310 Hrs / 1016 Cycles\n\n--- Page 2 (pdf_text) ---\nCentre for Military Airworthiness and Certification\nFORM - 44\nDEFECT INVESTIGATION REPORT FORMAT\nPart - III: (Defect Details)\na) Defect Category: Safety Critical\nb) Defect Observed: Door latch mechanism failure to engage. Malfunction reported by flight crew.\nPart IV: Investigation: (Details of Examination including previous similar Defects)\na) Root Cause Analysis: Wear beyond serviceable limits due to extended operational hours\nb) Findings / Conclusions: Detailed investigation conducted on the defective Cargo Handling component. Physical\nexamination revealed signs of wear and degradation.\nc) Remedial Measures Conduct detailed inspection of all similar components in fleet\ni. Corrective Action:\nii. Preventive Action: Conduct fleet-wide inspection campaign\nd) Attributable Code: D - Due to features inherent in the design\nRemarks: Comprehensive a...",
+  "processed_ts": "2025-12-12T16:55:00.551594"
+}

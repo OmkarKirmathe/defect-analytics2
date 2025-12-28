@@ -1,0 +1,214 @@
+{
+  "case_id": "DR_2021_0111",
+  "source_file": "FORM44_Synthetic_111.pdf",
+  "extracted": {
+    "dr_no": {
+      "value": "DR/2021/0111",
+      "source": "full_text",
+      "pattern": "(DR/\\d{4}/\\d{3,5})",
+      "confidence": "medium"
+    },
+    "date_of_occurrence": {
+      "value": "08/04/2024",
+      "source": "full_text",
+      "pattern": "Date of Occurrence[:\\s]*([0-9]{1,2}/[0-9]{1,2}/[0-9]{4})",
+      "confidence": "medium"
+    },
+    "aircraft": {
+      "value": "Ghost Recon - AC-5446-513 at Zone-2 Facility",
+      "source": "full_text",
+      "pattern": "Installation Details[:\\s]*([\\s\\S]{1,200}?)(?=\\n[a-z]\\)|\\nPart\\s*-?\\s*II|\\n$)",
+      "confidence": "high"
+    },
+    "trade": {
+      "value": "Propulsion",
+      "source": "full_text",
+      "pattern": "Trade[:\\s]*([A-Za-z0-9 \\-/]+?)(?=\\s*b\\)|\\s*c\\)|\\n|$)",
+      "confidence": "medium"
+    },
+    "system": {
+      "value": "Exhaust System",
+      "source": "full_text",
+      "pattern": "System(?:/Sub System)?[:\\s]*([A-Za-z0-9 \\-/]+?)(?=\\s*[a-f]\\)|\\n|$)",
+      "confidence": "medium"
+    },
+    "main_assembly": {
+      "value": "Station-3 Starboard",
+      "source": "full_text",
+      "pattern": "Main Assembly[:\\s]*([A-Za-z0-9 \\-/]+?)(?=\\s*[a-f]\\)|\\n|$)",
+      "confidence": "medium"
+    },
+    "nomenclature": {
+      "value": "Exhaust System Assembly Unit",
+      "source": "full_text",
+      "pattern": "Nomenclature[:\\s]*([A-Za-z0-9 \\-/]+?)(?=\\s*f\\)|\\n|$)",
+      "confidence": "high"
+    },
+    "mod_status": {
+      "value": "MOD-B",
+      "source": "full_text",
+      "pattern": "MOD Status[:\\s]*([A-Za-z0-9 \\-]+)",
+      "confidence": "low"
+    },
+    "part_no": {
+      "value": "PR-2376-J2",
+      "source": "full_text",
+      "pattern": "Part\\s*No[\\.:\\s]*([A-Za-z0-9\\-\\/]+)",
+      "confidence": "medium"
+    },
+    "serial_no": {
+      "value": "SN-4713-426",
+      "source": "full_text",
+      "pattern": "Sl\\s*No[\\.:\\s]*([A-Za-z0-9\\-\\/]+)",
+      "confidence": "medium"
+    },
+    "date_of_installation": {
+      "value": "17/04/2022",
+      "source": "full_text",
+      "pattern": "Date\\s*of\\s*Installation[:\\s]*([0-9]{1,2}/[0-9]{1,2}/[0-9]{4})",
+      "confidence": "medium"
+    },
+    "date_of_removal": {
+      "value": "10/04/2024",
+      "source": "full_text",
+      "pattern": "Date\\s*of\\s*Removal[:\\s]*([0-9]{1,2}/[0-9]{1,2}/[0-9]{4})",
+      "confidence": "medium"
+    },
+    "manufacturer": {
+      "value": "Skyward Defense Systems",
+      "source": "full_text",
+      "pattern": "Manufactur(?:er|ing Agency)[:\\s]*([A-Za-z0-9 .\\-]+?)(?=\\s*n\\)|\\n|$)",
+      "confidence": "high"
+    },
+    "manufacture_date": {
+      "value": "July 2020",
+      "source": "full_text",
+      "pattern": "Date, Month & Year[:\\s]*([A-Za-z]+\\s+[0-9]{4})",
+      "confidence": "medium"
+    },
+    "warranty": {
+      "value": "Yes",
+      "source": "full_text",
+      "pattern": "Whether under warranty[:\\s]*(Yes|No)",
+      "confidence": "low"
+    },
+    "amc_repair_contract": {
+      "value": "Yes",
+      "source": "full_text",
+      "pattern": "Whether under AMC[:\\s]*(Yes|No)",
+      "confidence": "low"
+    },
+    "life": {
+      "value": {
+        "raw": "1843 Hrs / 556 Cycles",
+        "hours": 1843,
+        "cycles": 556
+      },
+      "source": "full_text",
+      "pattern": "Life completed.*?:\\s*([0-9,\\.]+\\s*Hrs\\s*\\/\\s*[0-9,\\.]+\\s*Cycles)",
+      "confidence": "high"
+    },
+    "defect_category": {
+      "value": "Major",
+      "source": "full_text",
+      "pattern": "Defect Category[:\\s]*([A-Za-z \\-]+)",
+      "confidence": "low"
+    },
+    "defect_observed": {
+      "value": "Oil consumption rate increase. Issue identified during pre-flight checks.",
+      "source": "full_text",
+      "pattern": "Defect Observed[:\\s]*([\\s\\S]{1,400}?)(?=\\nPart\\s*-?\\s*IV|\\n[a-z]\\)|$)",
+      "confidence": "high"
+    },
+    "root_cause": {
+      "value": "Contamination ingress through damaged seal assembly",
+      "source": "full_text",
+      "pattern": "Root Cause Analysis[:\\s]*([\\s\\S]{1,400}?)(?=(?:[\\s\\r\\n]*)[a-z]\\)|\\nFindings|Corrective|Preventive|$)",
+      "confidence": "high"
+    },
+    "findings": {
+      "value": "Detailed investigation conducted on the defective Exhaust System component. Functional testing confirmed the reported anomaly.",
+      "source": "full_text",
+      "pattern": "Findings\\s*/\\s*Conclusions[:\\s]*([\\s\\S]{1,600}?)(?=(?:[\\s\\r\\n]*)[a-z]\\)|\\nCorrective|Preventive|\\nPart\\s*-?\\s*V|$)",
+      "confidence": "high"
+    },
+    "corrective_action": {
+      "value": "Repair damaged area using approved repair scheme",
+      "source": "full_text",
+      "pattern": "Corrective Action[:\\s]*([\\s\\S]{1,400}?)(?=(?:[\\s\\r\\n]*)ii\\.[\\s\\r\\n]|(?:[\\s\\r\\n]*)Preventive Action|(?:[\\s\\r\\n]*)[a-z]\\)|\\nPart\\s*-?\\s*V|$)",
+      "confidence": "high"
+    },
+    "preventive_action": {
+      "value": "Update technical documentation with lessons learned",
+      "source": "full_text",
+      "pattern": "Preventive Action[:\\s]*([\\s\\S]{1,400}?)(?=(?:[\\s\\r\\n]*)[a-z]\\)|\\nPart\\s*-?\\s*V|\\nFindings|$)",
+      "confidence": "high"
+    },
+    "remarks_investigation": {
+      "value": "Investigation completed as per established procedures. All findings documented.",
+      "source": "full_text",
+      "pattern": "Part\\s*-?\\s*IV[\\s\\S]*?Remarks[:\\s]*([\\s\\S]{1,600}?)(?=\\nPart\\s*-?\\s*V|$)",
+      "confidence": "high"
+    },
+    "remarks_design": {
+      "value": "Design review completed. No design modification required. Component replacement as per maintenance manual is adequate. Date: 11/05/2024 Authorized Signatory of Design: Air Cmde R.K. Joshi",
+      "source": "full_text",
+      "pattern": "Part\\s*-?\\s*V[\\s\\S]*?Remarks(?:\\s*by\\s*Design)?[:\\s]*([\\s\\S]{1,600}?)(?=\\nPart\\s*-?\\s*VI|$)",
+      "confidence": "high"
+    },
+    "remarks_quality": {
+      "value": "Dept. Manufacturing quality documentation reviewed. No deviations noted. Concur with investigation findings. Date: 12/05/2024 Signature: Dr. P.L. Mehta",
+      "source": "full_text",
+      "pattern": "Part\\s*-?\\s*VI[\\s\\S]*?Remarks(?:\\s*by\\s*Quality)?[:\\s]*([\\s\\S]{1,600}?)(?=\\nPart\\s*-?\\s*VII|$)",
+      "confidence": "high"
+    },
+    "remarks_user": {
+      "value": "(Project):(if applicable) Operational usage reviewed. Component operated within prescribed limits. Concur with investigation outcome. Date: 15/05/2024 Signature: Dr. S.M. Kulkarni",
+      "source": "full_text",
+      "pattern": "Part\\s*-?\\s*VII[\\s\\S]*?Remarks(?:\\s*by\\s*User|Project)?[:\\s]*([\\s\\S]{1,600}?)(?=\\nPart\\s*-?\\s*VIII|$)",
+      "confidence": "high"
+    },
+    "remarks_ordaqa": {
+      "value": "(Quality Aspects) From quality standpoint, root cause analysis is thorough. Corrective measures are appropriate. Concur. Date: 15/05/2024 Signature: Wg Cdr B.P. Gupta",
+      "source": "full_text",
+      "pattern": "Part\\s*-?\\s*VIII[\\s\\S]*?Remarks(?:\\s*by\\s*ORDAQA)?[:\\s]*([\\s\\S]{1,600}?)(?=\\nPart\\s*-?\\s*IX|$)",
+      "confidence": "high"
+    },
+    "remarks_cemilac": {
+      "value": "/ RCMA (Design Aspects) Airworthiness implications assessed. Recommend issuance of technical directive for fleet-wide compliance. Date: 18/05/2024 Signature: Wg Cdr M.S. Reddy",
+      "source": "full_text",
+      "pattern": "Part\\s*-?\\s*IX[\\s\\S]*?Remarks(?:\\s*by\\s*CEMILAC|CEMILAC\\s*/\\s*RCMA)?[:\\s]*([\\s\\S]{1,600}?)(?=\\nEdition|$)",
+      "confidence": "high"
+    },
+    "date_component_received": {
+      "value": "11/04/2024",
+      "source": "partII",
+      "pattern": "partII_dcr",
+      "confidence": "high"
+    },
+    "approvals": {
+      "design": {
+        "name": "Air Cmde R.K. Joshi",
+        "date": "2024-05-11"
+      },
+      "quality": {
+        "name": "Dr. P.L. Mehta",
+        "date": "2024-05-12"
+      },
+      "user": {
+        "name": "Dr. S.M. Kulkarni",
+        "date": "2024-05-15"
+      },
+      "ordaqa": {
+        "name": "Wg Cdr B.P. Gupta",
+        "date": "2024-05-15"
+      },
+      "cemilac": {
+        "name": "Wg Cdr M.S. Reddy",
+        "date": "2024-05-18"
+      }
+    }
+  },
+  "raw_text_snippet": "--- Page 1 (pdf_text) ---\nCentre for Military Airworthiness and Certification\nFORM - 44\nDEFECT INVESTIGATION REPORT FORMAT\nIn accordance with IMTAR  21, Subpart C1, 21.C1.18, Subpart C2, 21.C2.9 & Subpart C3, 21.C3.1.20.\nPart - I (Reference): Incident /Accident/ Snag / Explosive\na) Defect Report (DR) No: DR/2021/0111 b) Date of Occurrence: 08/04/2024\nc) Installation Details: Ghost Recon - AC-5446-513 at\nZone-2 Facility\nPart - II: (Details of Defective Component)\na) Trade: Propulsion b) Date Component 11/04/2024\nReceived:\nc) System/Sub System: Exhaust System d) Main Assembly: Station-3 Starboard\ne) Nomenclature: Exhaust System Assembly Unit f) MOD Status: MOD-B\ng) Part No.: PR-2376-J2 h) Sl No.: SN-4713-426\ni) Firmware Version: Not Applicable j) Software Version: Not Applicable\nk) Date of Installation: 17/04/2022 l) Date of Removal: 10/04/2024\nPg No: 37 Ln No: 21 Pg No: 60 Ln No: 23\nm) Manufacturing Agency: Skyward Defense Systems n) Date, Month & Year July 2020\nof Manufacturing:\no) Whether under warranty: Yes p) Whether under AMC Yes\n/ Repair Contract:\nq) Life completed since New: 1843 Hrs / 556 Cycles\n\n--- Page 2 (pdf_text) ---\nCentre for Military Airworthiness and Certification\nFORM - 44\nDEFECT INVESTIGATION REPORT FORMAT\nPart - III: (Defect Details)\na) Defect Category: Major\nb) Defect Observed: Oil consumption rate increase. Issue identified during pre-flight checks.\nPart IV: Investigation: (Details of Examination including previous similar Defects)\na) Root Cause Analysis: Contamination ingress through damaged seal assembly\nb) Findings / Conclusions: Detailed investigation conducted on the defective Exhaust System component. Functional\ntesting confirmed the reported anomaly.\nc) Remedial Measures Repair damaged area using approved repair scheme\ni. Corrective Action:\nii. Preventive Action: Update technical documentation with lessons learned\nd) Attributable Code: F - Failure/ageing/Corrosion/Material Failure\nRemarks: Investigation completed as per established proce...",
+  "processed_ts": "2025-12-12T16:54:46.790869"
+}

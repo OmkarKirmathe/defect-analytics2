@@ -1,0 +1,214 @@
+{
+  "case_id": "DR_2022_0785",
+  "source_file": "FORM44_Synthetic_785.pdf",
+  "extracted": {
+    "dr_no": {
+      "value": "DR/2022/0785",
+      "source": "full_text",
+      "pattern": "(DR/\\d{4}/\\d{3,5})",
+      "confidence": "medium"
+    },
+    "date_of_occurrence": {
+      "value": "19/01/2023",
+      "source": "full_text",
+      "pattern": "Date of Occurrence[:\\s]*([0-9]{1,2}/[0-9]{1,2}/[0-9]{4})",
+      "confidence": "medium"
+    },
+    "aircraft": {
+      "value": "Falcon Prime - AC-3436-653 at Sector West Station",
+      "source": "full_text",
+      "pattern": "Installation Details[:\\s]*([\\s\\S]{1,200}?)(?=\\n[a-z]\\)|\\nPart\\s*-?\\s*II|\\n$)",
+      "confidence": "high"
+    },
+    "trade": {
+      "value": "Avionics",
+      "source": "full_text",
+      "pattern": "Trade[:\\s]*([A-Za-z0-9 \\-/]+?)(?=\\s*b\\)|\\s*c\\)|\\n|$)",
+      "confidence": "medium"
+    },
+    "system": {
+      "value": "Radar System",
+      "source": "full_text",
+      "pattern": "System(?:/Sub System)?[:\\s]*([A-Za-z0-9 \\-/]+?)(?=\\s*[a-f]\\)|\\n|$)",
+      "confidence": "medium"
+    },
+    "main_assembly": {
+      "value": "Rack-Beta",
+      "source": "full_text",
+      "pattern": "Main Assembly[:\\s]*([A-Za-z0-9 \\-/]+?)(?=\\s*[a-f]\\)|\\n|$)",
+      "confidence": "medium"
+    },
+    "nomenclature": {
+      "value": "Radar System Assembly Unit",
+      "source": "full_text",
+      "pattern": "Nomenclature[:\\s]*([A-Za-z0-9 \\-/]+?)(?=\\s*f\\)|\\n|$)",
+      "confidence": "high"
+    },
+    "mod_status": {
+      "value": "Standard",
+      "source": "full_text",
+      "pattern": "MOD Status[:\\s]*([A-Za-z0-9 \\-]+)",
+      "confidence": "medium"
+    },
+    "part_no": {
+      "value": "AV-8864-S3",
+      "source": "full_text",
+      "pattern": "Part\\s*No[\\.:\\s]*([A-Za-z0-9\\-\\/]+)",
+      "confidence": "medium"
+    },
+    "serial_no": {
+      "value": "SN-3366-312",
+      "source": "full_text",
+      "pattern": "Sl\\s*No[\\.:\\s]*([A-Za-z0-9\\-\\/]+)",
+      "confidence": "medium"
+    },
+    "date_of_installation": {
+      "value": "27/05/2021",
+      "source": "full_text",
+      "pattern": "Date\\s*of\\s*Installation[:\\s]*([0-9]{1,2}/[0-9]{1,2}/[0-9]{4})",
+      "confidence": "medium"
+    },
+    "date_of_removal": {
+      "value": "23/01/2023",
+      "source": "full_text",
+      "pattern": "Date\\s*of\\s*Removal[:\\s]*([0-9]{1,2}/[0-9]{1,2}/[0-9]{4})",
+      "confidence": "medium"
+    },
+    "manufacturer": {
+      "value": "Alpha Aviation Corp",
+      "source": "full_text",
+      "pattern": "Manufactur(?:er|ing Agency)[:\\s]*([A-Za-z0-9 .\\-]+?)(?=\\s*n\\)|\\n|$)",
+      "confidence": "medium"
+    },
+    "manufacture_date": {
+      "value": "February 2015",
+      "source": "full_text",
+      "pattern": "Date, Month & Year[:\\s]*([A-Za-z]+\\s+[0-9]{4})",
+      "confidence": "medium"
+    },
+    "warranty": {
+      "value": "Yes",
+      "source": "full_text",
+      "pattern": "Whether under warranty[:\\s]*(Yes|No)",
+      "confidence": "low"
+    },
+    "amc_repair_contract": {
+      "value": "No",
+      "source": "full_text",
+      "pattern": "Whether under AMC[:\\s]*(Yes|No)",
+      "confidence": "low"
+    },
+    "life": {
+      "value": {
+        "raw": "1555 Hrs / 757 Cycles",
+        "hours": 1555,
+        "cycles": 757
+      },
+      "source": "full_text",
+      "pattern": "Life completed.*?:\\s*([0-9,\\.]+\\s*Hrs\\s*\\/\\s*[0-9,\\.]+\\s*Cycles)",
+      "confidence": "high"
+    },
+    "defect_category": {
+      "value": "Minor",
+      "source": "full_text",
+      "pattern": "Defect Category[:\\s]*([A-Za-z \\-]+)",
+      "confidence": "low"
+    },
+    "defect_observed": {
+      "value": "Autopilot disengagement without warning. Anomaly detected during routine inspection.",
+      "source": "full_text",
+      "pattern": "Defect Observed[:\\s]*([\\s\\S]{1,400}?)(?=\\nPart\\s*-?\\s*IV|\\n[a-z]\\)|$)",
+      "confidence": "high"
+    },
+    "root_cause": {
+      "value": "Inadequate maintenance procedure resulting in improper installation",
+      "source": "full_text",
+      "pattern": "Root Cause Analysis[:\\s]*([\\s\\S]{1,400}?)(?=(?:[\\s\\r\\n]*)[a-z]\\)|\\nFindings|Corrective|Preventive|$)",
+      "confidence": "high"
+    },
+    "findings": {
+      "value": "Detailed investigation conducted on the defective Radar System component. Analysis of operational data indicated parameter deviation.",
+      "source": "full_text",
+      "pattern": "Findings\\s*/\\s*Conclusions[:\\s]*([\\s\\S]{1,600}?)(?=(?:[\\s\\r\\n]*)[a-z]\\)|\\nCorrective|Preventive|\\nPart\\s*-?\\s*V|$)",
+      "confidence": "high"
+    },
+    "corrective_action": {
+      "value": "Repair damaged area using approved repair scheme",
+      "source": "full_text",
+      "pattern": "Corrective Action[:\\s]*([\\s\\S]{1,400}?)(?=(?:[\\s\\r\\n]*)ii\\.[\\s\\r\\n]|(?:[\\s\\r\\n]*)Preventive Action|(?:[\\s\\r\\n]*)[a-z]\\)|\\nPart\\s*-?\\s*V|$)",
+      "confidence": "high"
+    },
+    "preventive_action": {
+      "value": "Issue technical bulletin to all operators",
+      "source": "full_text",
+      "pattern": "Preventive Action[:\\s]*([\\s\\S]{1,400}?)(?=(?:[\\s\\r\\n]*)[a-z]\\)|\\nPart\\s*-?\\s*V|\\nFindings|$)",
+      "confidence": "high"
+    },
+    "remarks_investigation": {
+      "value": "Detailed examination conducted. Corrective measures implemented.",
+      "source": "full_text",
+      "pattern": "Part\\s*-?\\s*IV[\\s\\S]*?Remarks[:\\s]*([\\s\\S]{1,600}?)(?=\\nPart\\s*-?\\s*V|$)",
+      "confidence": "high"
+    },
+    "remarks_design": {
+      "value": "Design review completed. No design modification required. Component replacement as per maintenance manual is adequate. Date: 23/02/2023 Authorized Signatory of Design: Dr. A.K. Sharma",
+      "source": "full_text",
+      "pattern": "Part\\s*-?\\s*V[\\s\\S]*?Remarks(?:\\s*by\\s*Design)?[:\\s]*([\\s\\S]{1,600}?)(?=\\nPart\\s*-?\\s*VI|$)",
+      "confidence": "high"
+    },
+    "remarks_quality": {
+      "value": "Dept. Component inspection records verified. All quality parameters were within acceptable limits during manufacturing. Date: 24/02/2023 Signature: Wg Cdr B.P. Gupta",
+      "source": "full_text",
+      "pattern": "Part\\s*-?\\s*VI[\\s\\S]*?Remarks(?:\\s*by\\s*Quality)?[:\\s]*([\\s\\S]{1,600}?)(?=\\nPart\\s*-?\\s*VII|$)",
+      "confidence": "high"
+    },
+    "remarks_user": {
+      "value": "(Project):(if applicable) Operational usage reviewed. Component operated within prescribed limits. Concur with investigation outcome. Date: 28/02/2023 Signature: Wg Cdr D.S. Nair",
+      "source": "full_text",
+      "pattern": "Part\\s*-?\\s*VII[\\s\\S]*?Remarks(?:\\s*by\\s*User|Project)?[:\\s]*([\\s\\S]{1,600}?)(?=\\nPart\\s*-?\\s*VIII|$)",
+      "confidence": "high"
+    },
+    "remarks_ordaqa": {
+      "value": "(Quality Aspects) Quality assurance framework assessed. Investigation process followed established protocols. Findings are valid. Date: 02/03/2023 Signature: Air Cmde R.K. Joshi",
+      "source": "full_text",
+      "pattern": "Part\\s*-?\\s*VIII[\\s\\S]*?Remarks(?:\\s*by\\s*ORDAQA)?[:\\s]*([\\s\\S]{1,600}?)(?=\\nPart\\s*-?\\s*IX|$)",
+      "confidence": "high"
+    },
+    "remarks_cemilac": {
+      "value": "/ RCMA (Design Aspects) Airworthiness implications assessed. Recommend issuance of technical directive for fleet-wide compliance. Date: 05/03/2023 Signature: Dr. S.M. Kulkarni",
+      "source": "full_text",
+      "pattern": "Part\\s*-?\\s*IX[\\s\\S]*?Remarks(?:\\s*by\\s*CEMILAC|CEMILAC\\s*/\\s*RCMA)?[:\\s]*([\\s\\S]{1,600}?)(?=\\nEdition|$)",
+      "confidence": "high"
+    },
+    "date_component_received": {
+      "value": "24/01/2023",
+      "source": "partII",
+      "pattern": "partII_dcr",
+      "confidence": "high"
+    },
+    "approvals": {
+      "design": {
+        "name": "Dr. A.K. Sharma",
+        "date": "2023-02-23"
+      },
+      "quality": {
+        "name": "Wg Cdr B.P. Gupta",
+        "date": "2023-02-24"
+      },
+      "user": {
+        "name": "Wg Cdr D.S. Nair",
+        "date": "2023-02-28"
+      },
+      "ordaqa": {
+        "name": "Air Cmde R.K. Joshi",
+        "date": "2023-03-02"
+      },
+      "cemilac": {
+        "name": "Dr. S.M. Kulkarni",
+        "date": "2023-03-05"
+      }
+    }
+  },
+  "raw_text_snippet": "--- Page 1 (pdf_text) ---\nCentre for Military Airworthiness and Certification\nFORM - 44\nDEFECT INVESTIGATION REPORT FORMAT\nIn accordance with IMTAR  21, Subpart C1, 21.C1.18, Subpart C2, 21.C2.9 & Subpart C3, 21.C3.1.20.\nPart - I (Reference): Incident /Accident/ Snag / Explosive\na) Defect Report (DR) No: DR/2022/0785 b) Date of Occurrence: 19/01/2023\nc) Installation Details: Falcon Prime - AC-3436-653 at\nSector West Station\nPart - II: (Details of Defective Component)\na) Trade: Avionics b) Date Component 24/01/2023\nReceived:\nc) System/Sub System: Radar System d) Main Assembly: Rack-Beta\ne) Nomenclature: Radar System Assembly Unit f) MOD Status: Standard\ng) Part No.: AV-8864-S3 h) Sl No.: SN-3366-312\ni) Firmware Version: FW-6.96.589 j) Software Version: SW-4.94.869\nk) Date of Installation: 27/05/2021 l) Date of Removal: 23/01/2023\nPg No: 56 Ln No: 3 Pg No: 123 Ln No: 3\nm) Manufacturing Agency: Alpha Aviation Corp n) Date, Month & Year February 2015\nof Manufacturing:\no) Whether under warranty: Yes p) Whether under AMC No\n/ Repair Contract:\nq) Life completed since New: 1555 Hrs / 757 Cycles\n\n--- Page 2 (pdf_text) ---\nCentre for Military Airworthiness and Certification\nFORM - 44\nDEFECT INVESTIGATION REPORT FORMAT\nPart - III: (Defect Details)\na) Defect Category: Minor\nb) Defect Observed: Autopilot disengagement without warning. Anomaly detected during routine inspection.\nPart IV: Investigation: (Details of Examination including previous similar Defects)\na) Root Cause Analysis: Inadequate maintenance procedure resulting in improper installation\nb) Findings / Conclusions: Detailed investigation conducted on the defective Radar System component. Analysis of\noperational data indicated parameter deviation.\nc) Remedial Measures Repair damaged area using approved repair scheme\ni. Corrective Action:\nii. Preventive Action: Issue technical bulletin to all operators\nd) Attributable Code: F - Failure/ageing/Corrosion/Material Failure\nRemarks: Detailed examination conducted. Correcti...",
+  "processed_ts": "2025-12-12T16:56:05.996645"
+}

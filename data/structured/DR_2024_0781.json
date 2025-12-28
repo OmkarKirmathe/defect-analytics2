@@ -1,0 +1,214 @@
+{
+  "case_id": "DR_2024_0781",
+  "source_file": "FORM44_Synthetic_781.pdf",
+  "extracted": {
+    "dr_no": {
+      "value": "DR/2024/0781",
+      "source": "full_text",
+      "pattern": "(DR/\\d{4}/\\d{3,5})",
+      "confidence": "medium"
+    },
+    "date_of_occurrence": {
+      "value": "06/05/2024",
+      "source": "full_text",
+      "pattern": "Date of Occurrence[:\\s]*([0-9]{1,2}/[0-9]{1,2}/[0-9]{4})",
+      "confidence": "medium"
+    },
+    "aircraft": {
+      "value": "Raptor Elite - AC-7417-814 at Central Command Hub",
+      "source": "full_text",
+      "pattern": "Installation Details[:\\s]*([\\s\\S]{1,200}?)(?=\\n[a-z]\\)|\\nPart\\s*-?\\s*II|\\n$)",
+      "confidence": "high"
+    },
+    "trade": {
+      "value": "Mechanical",
+      "source": "full_text",
+      "pattern": "Trade[:\\s]*([A-Za-z0-9 \\-/]+?)(?=\\s*b\\)|\\s*c\\)|\\n|$)",
+      "confidence": "medium"
+    },
+    "system": {
+      "value": "Fuel System",
+      "source": "full_text",
+      "pattern": "System(?:/Sub System)?[:\\s]*([A-Za-z0-9 \\-/]+?)(?=\\s*[a-f]\\)|\\n|$)",
+      "confidence": "medium"
+    },
+    "main_assembly": {
+      "value": "Station-1 Starboard",
+      "source": "full_text",
+      "pattern": "Main Assembly[:\\s]*([A-Za-z0-9 \\-/]+?)(?=\\s*[a-f]\\)|\\n|$)",
+      "confidence": "medium"
+    },
+    "nomenclature": {
+      "value": "Fuel System Assembly Unit",
+      "source": "full_text",
+      "pattern": "Nomenclature[:\\s]*([A-Za-z0-9 \\-/]+?)(?=\\s*f\\)|\\n|$)",
+      "confidence": "high"
+    },
+    "mod_status": {
+      "value": "MOD-C",
+      "source": "full_text",
+      "pattern": "MOD Status[:\\s]*([A-Za-z0-9 \\-]+)",
+      "confidence": "low"
+    },
+    "part_no": {
+      "value": "MC-8348-G9",
+      "source": "full_text",
+      "pattern": "Part\\s*No[\\.:\\s]*([A-Za-z0-9\\-\\/]+)",
+      "confidence": "medium"
+    },
+    "serial_no": {
+      "value": "SN-6103-891",
+      "source": "full_text",
+      "pattern": "Sl\\s*No[\\.:\\s]*([A-Za-z0-9\\-\\/]+)",
+      "confidence": "medium"
+    },
+    "date_of_installation": {
+      "value": "08/05/2022",
+      "source": "full_text",
+      "pattern": "Date\\s*of\\s*Installation[:\\s]*([0-9]{1,2}/[0-9]{1,2}/[0-9]{4})",
+      "confidence": "medium"
+    },
+    "date_of_removal": {
+      "value": "08/05/2024",
+      "source": "full_text",
+      "pattern": "Date\\s*of\\s*Removal[:\\s]*([0-9]{1,2}/[0-9]{1,2}/[0-9]{4})",
+      "confidence": "medium"
+    },
+    "manufacturer": {
+      "value": "Omega Flight Technologies",
+      "source": "full_text",
+      "pattern": "Manufactur(?:er|ing Agency)[:\\s]*([A-Za-z0-9 .\\-]+?)(?=\\s*n\\)|\\n|$)",
+      "confidence": "high"
+    },
+    "manufacture_date": {
+      "value": "July 2015",
+      "source": "full_text",
+      "pattern": "Date, Month & Year[:\\s]*([A-Za-z]+\\s+[0-9]{4})",
+      "confidence": "medium"
+    },
+    "warranty": {
+      "value": "Yes",
+      "source": "full_text",
+      "pattern": "Whether under warranty[:\\s]*(Yes|No)",
+      "confidence": "low"
+    },
+    "amc_repair_contract": {
+      "value": "Yes",
+      "source": "full_text",
+      "pattern": "Whether under AMC[:\\s]*(Yes|No)",
+      "confidence": "low"
+    },
+    "life": {
+      "value": {
+        "raw": "4838 Hrs / 1761 Cycles",
+        "hours": 4838,
+        "cycles": 1761
+      },
+      "source": "full_text",
+      "pattern": "Life completed.*?:\\s*([0-9,\\.]+\\s*Hrs\\s*\\/\\s*[0-9,\\.]+\\s*Cycles)",
+      "confidence": "high"
+    },
+    "defect_category": {
+      "value": "Observation",
+      "source": "full_text",
+      "pattern": "Defect Category[:\\s]*([A-Za-z \\-]+)",
+      "confidence": "medium"
+    },
+    "defect_observed": {
+      "value": "Actuator rod end play exceeding tolerance. Anomaly detected during routine inspection.",
+      "source": "full_text",
+      "pattern": "Defect Observed[:\\s]*([\\s\\S]{1,400}?)(?=\\nPart\\s*-?\\s*IV|\\n[a-z]\\)|$)",
+      "confidence": "high"
+    },
+    "root_cause": {
+      "value": "Manufacturing defect in material composition leading to premature failure",
+      "source": "full_text",
+      "pattern": "Root Cause Analysis[:\\s]*([\\s\\S]{1,400}?)(?=(?:[\\s\\r\\n]*)[a-z]\\)|\\nFindings|Corrective|Preventive|$)",
+      "confidence": "high"
+    },
+    "findings": {
+      "value": "Detailed investigation conducted on the defective Fuel System component. Functional testing confirmed the reported anomaly.",
+      "source": "full_text",
+      "pattern": "Findings\\s*/\\s*Conclusions[:\\s]*([\\s\\S]{1,600}?)(?=(?:[\\s\\r\\n]*)[a-z]\\)|\\nCorrective|Preventive|\\nPart\\s*-?\\s*V|$)",
+      "confidence": "high"
+    },
+    "corrective_action": {
+      "value": "Replace entire assembly due to extent of damage",
+      "source": "full_text",
+      "pattern": "Corrective Action[:\\s]*([\\s\\S]{1,400}?)(?=(?:[\\s\\r\\n]*)ii\\.[\\s\\r\\n]|(?:[\\s\\r\\n]*)Preventive Action|(?:[\\s\\r\\n]*)[a-z]\\)|\\nPart\\s*-?\\s*V|$)",
+      "confidence": "high"
+    },
+    "preventive_action": {
+      "value": "Reduce inspection interval for affected component type",
+      "source": "full_text",
+      "pattern": "Preventive Action[:\\s]*([\\s\\S]{1,400}?)(?=(?:[\\s\\r\\n]*)[a-z]\\)|\\nPart\\s*-?\\s*V|\\nFindings|$)",
+      "confidence": "high"
+    },
+    "remarks_investigation": {
+      "value": "Detailed examination conducted. Corrective measures implemented.",
+      "source": "full_text",
+      "pattern": "Part\\s*-?\\s*IV[\\s\\S]*?Remarks[:\\s]*([\\s\\S]{1,600}?)(?=\\nPart\\s*-?\\s*V|$)",
+      "confidence": "high"
+    },
+    "remarks_design": {
+      "value": "Technical evaluation completed. Proposed preventive measures are appropriate and align with design intent. Date: 22/05/2024 Authorized Signatory of Design: Eng. T.R. Menon",
+      "source": "full_text",
+      "pattern": "Part\\s*-?\\s*V[\\s\\S]*?Remarks(?:\\s*by\\s*Design)?[:\\s]*([\\s\\S]{1,600}?)(?=\\nPart\\s*-?\\s*VI|$)",
+      "confidence": "high"
+    },
+    "remarks_quality": {
+      "value": "Dept. Manufacturing quality documentation reviewed. No deviations noted. Concur with investigation findings. Date: 23/05/2024 Signature: Eng. T.R. Menon",
+      "source": "full_text",
+      "pattern": "Part\\s*-?\\s*VI[\\s\\S]*?Remarks(?:\\s*by\\s*Quality)?[:\\s]*([\\s\\S]{1,600}?)(?=\\nPart\\s*-?\\s*VII|$)",
+      "confidence": "high"
+    },
+    "remarks_user": {
+      "value": "(Project):(if applicable) Fleet experience reviewed. Similar occurrences noted on other platforms. Support fleet-wide inspection. Date: 27/05/2024 Signature: Eng. T.R. Menon",
+      "source": "full_text",
+      "pattern": "Part\\s*-?\\s*VII[\\s\\S]*?Remarks(?:\\s*by\\s*User|Project)?[:\\s]*([\\s\\S]{1,600}?)(?=\\nPart\\s*-?\\s*VIII|$)",
+      "confidence": "high"
+    },
+    "remarks_ordaqa": {
+      "value": "(Quality Aspects) From quality standpoint, root cause analysis is thorough. Corrective measures are appropriate. Concur. Date: 29/05/2024 Signature: Eng. K.N. Iyer",
+      "source": "full_text",
+      "pattern": "Part\\s*-?\\s*VIII[\\s\\S]*?Remarks(?:\\s*by\\s*ORDAQA)?[:\\s]*([\\s\\S]{1,600}?)(?=\\nPart\\s*-?\\s*IX|$)",
+      "confidence": "high"
+    },
+    "remarks_cemilac": {
+      "value": "/ RCMA (Design Aspects) From regulatory standpoint, investigation meets required standards. Approve proposed corrective actions. Date: 28/05/2024 Signature: Sqn Ldr A.R. Desai",
+      "source": "full_text",
+      "pattern": "Part\\s*-?\\s*IX[\\s\\S]*?Remarks(?:\\s*by\\s*CEMILAC|CEMILAC\\s*/\\s*RCMA)?[:\\s]*([\\s\\S]{1,600}?)(?=\\nEdition|$)",
+      "confidence": "high"
+    },
+    "date_component_received": {
+      "value": "11/05/2024",
+      "source": "partII",
+      "pattern": "partII_dcr",
+      "confidence": "high"
+    },
+    "approvals": {
+      "design": {
+        "name": "Eng. T.R. Menon",
+        "date": "2024-05-22"
+      },
+      "quality": {
+        "name": "Eng. T.R. Menon",
+        "date": "2024-05-23"
+      },
+      "user": {
+        "name": "Eng. T.R. Menon",
+        "date": "2024-05-27"
+      },
+      "ordaqa": {
+        "name": "Eng. K.N. Iyer",
+        "date": "2024-05-29"
+      },
+      "cemilac": {
+        "name": "Sqn Ldr A.R. Desai",
+        "date": "2024-05-28"
+      }
+    }
+  },
+  "raw_text_snippet": "--- Page 1 (pdf_text) ---\nCentre for Military Airworthiness and Certification\nFORM - 44\nDEFECT INVESTIGATION REPORT FORMAT\nIn accordance with IMTAR  21, Subpart C1, 21.C1.18, Subpart C2, 21.C2.9 & Subpart C3, 21.C3.1.20.\nPart - I (Reference): Incident /Accident/ Snag / Explosive\na) Defect Report (DR) No: DR/2024/0781 b) Date of Occurrence: 06/05/2024\nc) Installation Details: Raptor Elite - AC-7417-814 at\nCentral Command Hub\nPart - II: (Details of Defective Component)\na) Trade: Mechanical b) Date Component 11/05/2024\nReceived:\nc) System/Sub System: Fuel System d) Main Assembly: Station-1 Starboard\ne) Nomenclature: Fuel System Assembly Unit f) MOD Status: MOD-C\ng) Part No.: MC-8348-G9 h) Sl No.: SN-6103-891\ni) Firmware Version: Not Applicable j) Software Version: Not Applicable\nk) Date of Installation: 08/05/2022 l) Date of Removal: 08/05/2024\nPg No: 55 Ln No: 27 Pg No: 89 Ln No: 30\nm) Manufacturing Agency: Omega Flight Technologies n) Date, Month & Year July 2015\nof Manufacturing:\no) Whether under warranty: Yes p) Whether under AMC Yes\n/ Repair Contract:\nq) Life completed since New: 4838 Hrs / 1761 Cycles\n\n--- Page 2 (pdf_text) ---\nCentre for Military Airworthiness and Certification\nFORM - 44\nDEFECT INVESTIGATION REPORT FORMAT\nPart - III: (Defect Details)\na) Defect Category: Observation\nb) Defect Observed: Actuator rod end play exceeding tolerance. Anomaly detected during routine inspection.\nPart IV: Investigation: (Details of Examination including previous similar Defects)\na) Root Cause Analysis: Manufacturing defect in material composition leading to premature failure\nb) Findings / Conclusions: Detailed investigation conducted on the defective Fuel System component. Functional\ntesting confirmed the reported anomaly.\nc) Remedial Measures Replace entire assembly due to extent of damage\ni. Corrective Action:\nii. Preventive Action: Reduce inspection interval for affected component type\nd) Attributable Code: N2 - Defect Not Confirmed\nRemarks: Detailed examination condu...",
+  "processed_ts": "2025-12-12T16:56:05.555476"
+}

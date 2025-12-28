@@ -1,0 +1,214 @@
+{
+  "case_id": "DR_2023_0364",
+  "source_file": "FORM44_Synthetic_364.pdf",
+  "extracted": {
+    "dr_no": {
+      "value": "DR/2023/0364",
+      "source": "full_text",
+      "pattern": "(DR/\\d{4}/\\d{3,5})",
+      "confidence": "medium"
+    },
+    "date_of_occurrence": {
+      "value": "12/09/2024",
+      "source": "full_text",
+      "pattern": "Date of Occurrence[:\\s]*([0-9]{1,2}/[0-9]{1,2}/[0-9]{4})",
+      "confidence": "medium"
+    },
+    "aircraft": {
+      "value": "Talon Swift - AC-8856-147 at Base Delta",
+      "source": "full_text",
+      "pattern": "Installation Details[:\\s]*([\\s\\S]{1,200}?)(?=\\n[a-z]\\)|\\nPart\\s*-?\\s*II|\\n$)",
+      "confidence": "high"
+    },
+    "trade": {
+      "value": "Mechanical",
+      "source": "full_text",
+      "pattern": "Trade[:\\s]*([A-Za-z0-9 \\-/]+?)(?=\\s*b\\)|\\s*c\\)|\\n|$)",
+      "confidence": "medium"
+    },
+    "system": {
+      "value": "Flight Control",
+      "source": "full_text",
+      "pattern": "System(?:/Sub System)?[:\\s]*([A-Za-z0-9 \\-/]+?)(?=\\s*[a-f]\\)|\\n|$)",
+      "confidence": "medium"
+    },
+    "main_assembly": {
+      "value": "Station-3 Starboard",
+      "source": "full_text",
+      "pattern": "Main Assembly[:\\s]*([A-Za-z0-9 \\-/]+?)(?=\\s*[a-f]\\)|\\n|$)",
+      "confidence": "medium"
+    },
+    "nomenclature": {
+      "value": "Flight Control Assembly Unit",
+      "source": "full_text",
+      "pattern": "Nomenclature[:\\s]*([A-Za-z0-9 \\-/]+?)(?=\\s*f\\)|\\n|$)",
+      "confidence": "high"
+    },
+    "mod_status": {
+      "value": "Upgraded",
+      "source": "full_text",
+      "pattern": "MOD Status[:\\s]*([A-Za-z0-9 \\-]+)",
+      "confidence": "medium"
+    },
+    "part_no": {
+      "value": "MC-5351-V1",
+      "source": "full_text",
+      "pattern": "Part\\s*No[\\.:\\s]*([A-Za-z0-9\\-\\/]+)",
+      "confidence": "medium"
+    },
+    "serial_no": {
+      "value": "SN-6233-377",
+      "source": "full_text",
+      "pattern": "Sl\\s*No[\\.:\\s]*([A-Za-z0-9\\-\\/]+)",
+      "confidence": "medium"
+    },
+    "date_of_installation": {
+      "value": "04/03/2022",
+      "source": "full_text",
+      "pattern": "Date\\s*of\\s*Installation[:\\s]*([0-9]{1,2}/[0-9]{1,2}/[0-9]{4})",
+      "confidence": "medium"
+    },
+    "date_of_removal": {
+      "value": "17/09/2024",
+      "source": "full_text",
+      "pattern": "Date\\s*of\\s*Removal[:\\s]*([0-9]{1,2}/[0-9]{1,2}/[0-9]{4})",
+      "confidence": "medium"
+    },
+    "manufacturer": {
+      "value": "Gamma Defense Manufacturing",
+      "source": "full_text",
+      "pattern": "Manufactur(?:er|ing Agency)[:\\s]*([A-Za-z0-9 .\\-]+?)(?=\\s*n\\)|\\n|$)",
+      "confidence": "high"
+    },
+    "manufacture_date": {
+      "value": "March 2017",
+      "source": "full_text",
+      "pattern": "Date, Month & Year[:\\s]*([A-Za-z]+\\s+[0-9]{4})",
+      "confidence": "medium"
+    },
+    "warranty": {
+      "value": "Yes",
+      "source": "full_text",
+      "pattern": "Whether under warranty[:\\s]*(Yes|No)",
+      "confidence": "low"
+    },
+    "amc_repair_contract": {
+      "value": "Yes",
+      "source": "full_text",
+      "pattern": "Whether under AMC[:\\s]*(Yes|No)",
+      "confidence": "low"
+    },
+    "life": {
+      "value": {
+        "raw": "4888 Hrs / 380 Cycles",
+        "hours": 4888,
+        "cycles": 380
+      },
+      "source": "full_text",
+      "pattern": "Life completed.*?:\\s*([0-9,\\.]+\\s*Hrs\\s*\\/\\s*[0-9,\\.]+\\s*Cycles)",
+      "confidence": "high"
+    },
+    "defect_category": {
+      "value": "Safety Critical",
+      "source": "full_text",
+      "pattern": "Defect Category[:\\s]*([A-Za-z \\-]+)",
+      "confidence": "medium"
+    },
+    "defect_observed": {
+      "value": "Wheel brake assembly seizure. Abnormality observed during system test.",
+      "source": "full_text",
+      "pattern": "Defect Observed[:\\s]*([\\s\\S]{1,400}?)(?=\\nPart\\s*-?\\s*IV|\\n[a-z]\\)|$)",
+      "confidence": "high"
+    },
+    "root_cause": {
+      "value": "Environmental exposure causing accelerated degradation of protective coatings",
+      "source": "full_text",
+      "pattern": "Root Cause Analysis[:\\s]*([\\s\\S]{1,400}?)(?=(?:[\\s\\r\\n]*)[a-z]\\)|\\nFindings|Corrective|Preventive|$)",
+      "confidence": "high"
+    },
+    "findings": {
+      "value": "Detailed investigation conducted on the defective Flight Control component. Analysis of operational data indicated parameter deviation.",
+      "source": "full_text",
+      "pattern": "Findings\\s*/\\s*Conclusions[:\\s]*([\\s\\S]{1,600}?)(?=(?:[\\s\\r\\n]*)[a-z]\\)|\\nCorrective|Preventive|\\nPart\\s*-?\\s*V|$)",
+      "confidence": "high"
+    },
+    "corrective_action": {
+      "value": "Repair damaged area using approved repair scheme",
+      "source": "full_text",
+      "pattern": "Corrective Action[:\\s]*([\\s\\S]{1,400}?)(?=(?:[\\s\\r\\n]*)ii\\.[\\s\\r\\n]|(?:[\\s\\r\\n]*)Preventive Action|(?:[\\s\\r\\n]*)[a-z]\\)|\\nPart\\s*-?\\s*V|$)",
+      "confidence": "high"
+    },
+    "preventive_action": {
+      "value": "Reduce inspection interval for affected component type",
+      "source": "full_text",
+      "pattern": "Preventive Action[:\\s]*([\\s\\S]{1,400}?)(?=(?:[\\s\\r\\n]*)[a-z]\\)|\\nPart\\s*-?\\s*V|\\nFindings|$)",
+      "confidence": "high"
+    },
+    "remarks_investigation": {
+      "value": "Comprehensive analysis performed. Root cause identified and verified.",
+      "source": "full_text",
+      "pattern": "Part\\s*-?\\s*IV[\\s\\S]*?Remarks[:\\s]*([\\s\\S]{1,600}?)(?=\\nPart\\s*-?\\s*V|$)",
+      "confidence": "high"
+    },
+    "remarks_design": {
+      "value": "Detailed analysis indicates design margins are adequate. Failure attributed to operational factors. Concur with findings. Date: 03/10/2024 Authorized Signatory of Design: Sqn Ldr V.K. Patel",
+      "source": "full_text",
+      "pattern": "Part\\s*-?\\s*V[\\s\\S]*?Remarks(?:\\s*by\\s*Design)?[:\\s]*([\\s\\S]{1,600}?)(?=\\nPart\\s*-?\\s*VI|$)",
+      "confidence": "high"
+    },
+    "remarks_quality": {
+      "value": "Dept. Quality control procedures verified. Recommend periodic surveillance of manufacturing facility. Date: 05/10/2024 Signature: Gp Capt V.S. Pillai",
+      "source": "full_text",
+      "pattern": "Part\\s*-?\\s*VI[\\s\\S]*?Remarks(?:\\s*by\\s*Quality)?[:\\s]*([\\s\\S]{1,600}?)(?=\\nPart\\s*-?\\s*VII|$)",
+      "confidence": "high"
+    },
+    "remarks_user": {
+      "value": "(Project):(if applicable) Operational usage reviewed. Component operated within prescribed limits. Concur with investigation outcome. Date: 05/10/2024 Signature: Eng. T.R. Menon",
+      "source": "full_text",
+      "pattern": "Part\\s*-?\\s*VII[\\s\\S]*?Remarks(?:\\s*by\\s*User|Project)?[:\\s]*([\\s\\S]{1,600}?)(?=\\nPart\\s*-?\\s*VIII|$)",
+      "confidence": "high"
+    },
+    "remarks_ordaqa": {
+      "value": "(Quality Aspects) Quality aspects from regulatory perspective reviewed. Investigation methodology is comprehensive and acceptable. Date: 07/10/2024 Signature: Sqn Ldr A.R. Desai",
+      "source": "full_text",
+      "pattern": "Part\\s*-?\\s*VIII[\\s\\S]*?Remarks(?:\\s*by\\s*ORDAQA)?[:\\s]*([\\s\\S]{1,600}?)(?=\\nPart\\s*-?\\s*IX|$)",
+      "confidence": "high"
+    },
+    "remarks_cemilac": {
+      "value": "/ RCMA (Design Aspects) Airworthiness implications assessed. Recommend issuance of technical directive for fleet-wide compliance. Date: 10/10/2024 Signature: Eng. R.P. Singh",
+      "source": "full_text",
+      "pattern": "Part\\s*-?\\s*IX[\\s\\S]*?Remarks(?:\\s*by\\s*CEMILAC|CEMILAC\\s*/\\s*RCMA)?[:\\s]*([\\s\\S]{1,600}?)(?=\\nEdition|$)",
+      "confidence": "high"
+    },
+    "date_component_received": {
+      "value": "20/09/2024",
+      "source": "partII",
+      "pattern": "partII_dcr",
+      "confidence": "high"
+    },
+    "approvals": {
+      "design": {
+        "name": "Sqn Ldr V.K. Patel",
+        "date": "2024-10-03"
+      },
+      "quality": {
+        "name": "Gp Capt V.S. Pillai",
+        "date": "2024-10-05"
+      },
+      "user": {
+        "name": "Eng. T.R. Menon",
+        "date": "2024-10-05"
+      },
+      "ordaqa": {
+        "name": "Sqn Ldr A.R. Desai",
+        "date": "2024-10-07"
+      },
+      "cemilac": {
+        "name": "Eng. R.P. Singh",
+        "date": "2024-10-10"
+      }
+    }
+  },
+  "raw_text_snippet": "--- Page 1 (pdf_text) ---\nCentre for Military Airworthiness and Certification\nFORM - 44\nDEFECT INVESTIGATION REPORT FORMAT\nIn accordance with IMTAR  21, Subpart C1, 21.C1.18, Subpart C2, 21.C2.9 & Subpart C3, 21.C3.1.20.\nPart - I (Reference): Incident /Accident/ Snag / Explosive\na) Defect Report (DR) No: DR/2023/0364 b) Date of Occurrence: 12/09/2024\nc) Installation Details: Talon Swift - AC-8856-147 at Base\nDelta\nPart - II: (Details of Defective Component)\na) Trade: Mechanical b) Date Component 20/09/2024\nReceived:\nc) System/Sub System: Flight Control d) Main Assembly: Station-3 Starboard\ne) Nomenclature: Flight Control Assembly Unit f) MOD Status: Upgraded\ng) Part No.: MC-5351-V1 h) Sl No.: SN-6233-377\ni) Firmware Version: Not Applicable j) Software Version: Not Applicable\nk) Date of Installation: 04/03/2022 l) Date of Removal: 17/09/2024\nPg No: 70 Ln No: 16 Pg No: 43 Ln No: 2\nm) Manufacturing Agency: Gamma Defense Manufacturing n) Date, Month & Year March 2017\nof Manufacturing:\no) Whether under warranty: Yes p) Whether under AMC Yes\n/ Repair Contract:\nq) Life completed since New: 4888 Hrs / 380 Cycles\n\n--- Page 2 (pdf_text) ---\nCentre for Military Airworthiness and Certification\nFORM - 44\nDEFECT INVESTIGATION REPORT FORMAT\nPart - III: (Defect Details)\na) Defect Category: Safety Critical\nb) Defect Observed: Wheel brake assembly seizure. Abnormality observed during system test.\nPart IV: Investigation: (Details of Examination including previous similar Defects)\na) Root Cause Analysis: Environmental exposure causing accelerated degradation of protective coatings\nb) Findings / Conclusions: Detailed investigation conducted on the defective Flight Control component. Analysis of\noperational data indicated parameter deviation.\nc) Remedial Measures Repair damaged area using approved repair scheme\ni. Corrective Action:\nii. Preventive Action: Reduce inspection interval for affected component type\nd) Attributable Code: F - Failure/ageing/Corrosion/Material Failure\nRemarks: C...",
+  "processed_ts": "2025-12-12T16:55:17.991425"
+}

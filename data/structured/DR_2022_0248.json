@@ -1,0 +1,214 @@
+{
+  "case_id": "DR_2022_0248",
+  "source_file": "FORM44_Synthetic_248.pdf",
+  "extracted": {
+    "dr_no": {
+      "value": "DR/2022/0248",
+      "source": "full_text",
+      "pattern": "(DR/\\d{4}/\\d{3,5})",
+      "confidence": "medium"
+    },
+    "date_of_occurrence": {
+      "value": "15/02/2024",
+      "source": "full_text",
+      "pattern": "Date of Occurrence[:\\s]*([0-9]{1,2}/[0-9]{1,2}/[0-9]{4})",
+      "confidence": "medium"
+    },
+    "aircraft": {
+      "value": "Cyclops Vision - AC-2163-251 at Training Center Alpha",
+      "source": "full_text",
+      "pattern": "Installation Details[:\\s]*([\\s\\S]{1,200}?)(?=\\n[a-z]\\)|\\nPart\\s*-?\\s*II|\\n$)",
+      "confidence": "high"
+    },
+    "trade": {
+      "value": "Structural",
+      "source": "full_text",
+      "pattern": "Trade[:\\s]*([A-Za-z0-9 \\-/]+?)(?=\\s*b\\)|\\s*c\\)|\\n|$)",
+      "confidence": "medium"
+    },
+    "system": {
+      "value": "Access Panels",
+      "source": "full_text",
+      "pattern": "System(?:/Sub System)?[:\\s]*([A-Za-z0-9 \\-/]+?)(?=\\s*[a-f]\\)|\\n|$)",
+      "confidence": "medium"
+    },
+    "main_assembly": {
+      "value": "Pylon-A",
+      "source": "full_text",
+      "pattern": "Main Assembly[:\\s]*([A-Za-z0-9 \\-/]+?)(?=\\s*[a-f]\\)|\\n|$)",
+      "confidence": "medium"
+    },
+    "nomenclature": {
+      "value": "Access Panels Assembly Unit",
+      "source": "full_text",
+      "pattern": "Nomenclature[:\\s]*([A-Za-z0-9 \\-/]+?)(?=\\s*f\\)|\\n|$)",
+      "confidence": "high"
+    },
+    "mod_status": {
+      "value": "MOD-D",
+      "source": "full_text",
+      "pattern": "MOD Status[:\\s]*([A-Za-z0-9 \\-]+)",
+      "confidence": "low"
+    },
+    "part_no": {
+      "value": "ST-1454-W3",
+      "source": "full_text",
+      "pattern": "Part\\s*No[\\.:\\s]*([A-Za-z0-9\\-\\/]+)",
+      "confidence": "medium"
+    },
+    "serial_no": {
+      "value": "SN-2037-222",
+      "source": "full_text",
+      "pattern": "Sl\\s*No[\\.:\\s]*([A-Za-z0-9\\-\\/]+)",
+      "confidence": "medium"
+    },
+    "date_of_installation": {
+      "value": "18/07/2021",
+      "source": "full_text",
+      "pattern": "Date\\s*of\\s*Installation[:\\s]*([0-9]{1,2}/[0-9]{1,2}/[0-9]{4})",
+      "confidence": "medium"
+    },
+    "date_of_removal": {
+      "value": "21/02/2024",
+      "source": "full_text",
+      "pattern": "Date\\s*of\\s*Removal[:\\s]*([0-9]{1,2}/[0-9]{1,2}/[0-9]{4})",
+      "confidence": "medium"
+    },
+    "manufacturer": {
+      "value": "Vanguard Systems Ltd",
+      "source": "full_text",
+      "pattern": "Manufactur(?:er|ing Agency)[:\\s]*([A-Za-z0-9 .\\-]+?)(?=\\s*n\\)|\\n|$)",
+      "confidence": "medium"
+    },
+    "manufacture_date": {
+      "value": "November 2018",
+      "source": "full_text",
+      "pattern": "Date, Month & Year[:\\s]*([A-Za-z]+\\s+[0-9]{4})",
+      "confidence": "medium"
+    },
+    "warranty": {
+      "value": "Yes",
+      "source": "full_text",
+      "pattern": "Whether under warranty[:\\s]*(Yes|No)",
+      "confidence": "low"
+    },
+    "amc_repair_contract": {
+      "value": "Yes",
+      "source": "full_text",
+      "pattern": "Whether under AMC[:\\s]*(Yes|No)",
+      "confidence": "low"
+    },
+    "life": {
+      "value": {
+        "raw": "3652 Hrs / 1657 Cycles",
+        "hours": 3652,
+        "cycles": 1657
+      },
+      "source": "full_text",
+      "pattern": "Life completed.*?:\\s*([0-9,\\.]+\\s*Hrs\\s*\\/\\s*[0-9,\\.]+\\s*Cycles)",
+      "confidence": "high"
+    },
+    "defect_category": {
+      "value": "Mission Critical",
+      "source": "full_text",
+      "pattern": "Defect Category[:\\s]*([A-Za-z \\-]+)",
+      "confidence": "medium"
+    },
+    "defect_observed": {
+      "value": "Fastener hole elongation. Defect found during scheduled maintenance.",
+      "source": "full_text",
+      "pattern": "Defect Observed[:\\s]*([\\s\\S]{1,400}?)(?=\\nPart\\s*-?\\s*IV|\\n[a-z]\\)|$)",
+      "confidence": "high"
+    },
+    "root_cause": {
+      "value": "Design limitation in component load capacity under extreme conditions",
+      "source": "full_text",
+      "pattern": "Root Cause Analysis[:\\s]*([\\s\\S]{1,400}?)(?=(?:[\\s\\r\\n]*)[a-z]\\)|\\nFindings|Corrective|Preventive|$)",
+      "confidence": "high"
+    },
+    "findings": {
+      "value": "Detailed investigation conducted on the defective Access Panels component. Functional testing confirmed the reported anomaly.",
+      "source": "full_text",
+      "pattern": "Findings\\s*/\\s*Conclusions[:\\s]*([\\s\\S]{1,600}?)(?=(?:[\\s\\r\\n]*)[a-z]\\)|\\nCorrective|Preventive|\\nPart\\s*-?\\s*V|$)",
+      "confidence": "high"
+    },
+    "corrective_action": {
+      "value": "Update software to latest certified version with bug fixes",
+      "source": "full_text",
+      "pattern": "Corrective Action[:\\s]*([\\s\\S]{1,400}?)(?=(?:[\\s\\r\\n]*)ii\\.[\\s\\r\\n]|(?:[\\s\\r\\n]*)Preventive Action|(?:[\\s\\r\\n]*)[a-z]\\)|\\nPart\\s*-?\\s*V|$)",
+      "confidence": "high"
+    },
+    "preventive_action": {
+      "value": "Modify design to incorporate additional safety margin",
+      "source": "full_text",
+      "pattern": "Preventive Action[:\\s]*([\\s\\S]{1,400}?)(?=(?:[\\s\\r\\n]*)[a-z]\\)|\\nPart\\s*-?\\s*V|\\nFindings|$)",
+      "confidence": "high"
+    },
+    "remarks_investigation": {
+      "value": "Thorough investigation completed. Preventive actions recommended.",
+      "source": "full_text",
+      "pattern": "Part\\s*-?\\s*IV[\\s\\S]*?Remarks[:\\s]*([\\s\\S]{1,600}?)(?=\\nPart\\s*-?\\s*V|$)",
+      "confidence": "high"
+    },
+    "remarks_design": {
+      "value": "Design review completed. No design modification required. Component replacement as per maintenance manual is adequate. Date: 06/03/2024 Authorized Signatory of Design: Wg Cdr M.S. Reddy",
+      "source": "full_text",
+      "pattern": "Part\\s*-?\\s*V[\\s\\S]*?Remarks(?:\\s*by\\s*Design)?[:\\s]*([\\s\\S]{1,600}?)(?=\\nPart\\s*-?\\s*VI|$)",
+      "confidence": "high"
+    },
+    "remarks_quality": {
+      "value": "Dept. Component inspection records verified. All quality parameters were within acceptable limits during manufacturing. Date: 08/03/2024 Signature: Sqn Ldr H.S. Bhatia",
+      "source": "full_text",
+      "pattern": "Part\\s*-?\\s*VI[\\s\\S]*?Remarks(?:\\s*by\\s*Quality)?[:\\s]*([\\s\\S]{1,600}?)(?=\\nPart\\s*-?\\s*VII|$)",
+      "confidence": "high"
+    },
+    "remarks_user": {
+      "value": "(Project):(if applicable) User feedback incorporated. Recommend enhanced crew training on system operation and limitations. Date: 08/03/2024 Signature: Gp Capt V.S. Pillai",
+      "source": "full_text",
+      "pattern": "Part\\s*-?\\s*VII[\\s\\S]*?Remarks(?:\\s*by\\s*User|Project)?[:\\s]*([\\s\\S]{1,600}?)(?=\\nPart\\s*-?\\s*VIII|$)",
+      "confidence": "high"
+    },
+    "remarks_ordaqa": {
+      "value": "(Quality Aspects) Quality assurance framework assessed. Investigation process followed established protocols. Findings are valid. Date: 09/03/2024 Signature: Air Cmde S.B. Rao",
+      "source": "full_text",
+      "pattern": "Part\\s*-?\\s*VIII[\\s\\S]*?Remarks(?:\\s*by\\s*ORDAQA)?[:\\s]*([\\s\\S]{1,600}?)(?=\\nPart\\s*-?\\s*IX|$)",
+      "confidence": "high"
+    },
+    "remarks_cemilac": {
+      "value": "/ RCMA (Design Aspects) Design authority review completed. Recommend continued airworthiness monitoring of affected component type. Date: 12/03/2024 Signature: Sqn Ldr H.S. Bhatia",
+      "source": "full_text",
+      "pattern": "Part\\s*-?\\s*IX[\\s\\S]*?Remarks(?:\\s*by\\s*CEMILAC|CEMILAC\\s*/\\s*RCMA)?[:\\s]*([\\s\\S]{1,600}?)(?=\\nEdition|$)",
+      "confidence": "high"
+    },
+    "date_component_received": {
+      "value": "22/02/2024",
+      "source": "partII",
+      "pattern": "partII_dcr",
+      "confidence": "high"
+    },
+    "approvals": {
+      "design": {
+        "name": "Wg Cdr M.S. Reddy",
+        "date": "2024-03-06"
+      },
+      "quality": {
+        "name": "Sqn Ldr H.S. Bhatia",
+        "date": "2024-03-08"
+      },
+      "user": {
+        "name": "Gp Capt V.S. Pillai",
+        "date": "2024-03-08"
+      },
+      "ordaqa": {
+        "name": "Air Cmde S.B. Rao",
+        "date": "2024-03-09"
+      },
+      "cemilac": {
+        "name": "Sqn Ldr H.S. Bhatia",
+        "date": "2024-03-12"
+      }
+    }
+  },
+  "raw_text_snippet": "--- Page 1 (pdf_text) ---\nCentre for Military Airworthiness and Certification\nFORM - 44\nDEFECT INVESTIGATION REPORT FORMAT\nIn accordance with IMTAR  21, Subpart C1, 21.C1.18, Subpart C2, 21.C2.9 & Subpart C3, 21.C3.1.20.\nPart - I (Reference): Incident /Accident/ Snag / Explosive\na) Defect Report (DR) No: DR/2022/0248 b) Date of Occurrence: 15/02/2024\nc) Installation Details: Cyclops Vision - AC-2163-251 at\nTraining Center Alpha\nPart - II: (Details of Defective Component)\na) Trade: Structural b) Date Component 22/02/2024\nReceived:\nc) System/Sub System: Access Panels d) Main Assembly: Pylon-A\ne) Nomenclature: Access Panels Assembly Unit f) MOD Status: MOD-D\ng) Part No.: ST-1454-W3 h) Sl No.: SN-2037-222\ni) Firmware Version: Not Applicable j) Software Version: Not Applicable\nk) Date of Installation: 18/07/2021 l) Date of Removal: 21/02/2024\nPg No: 142 Ln No: 22 Pg No: 85 Ln No: 18\nm) Manufacturing Agency: Vanguard Systems Ltd n) Date, Month & Year November 2018\nof Manufacturing:\no) Whether under warranty: Yes p) Whether under AMC Yes\n/ Repair Contract:\nq) Life completed since New: 3652 Hrs / 1657 Cycles\n\n--- Page 2 (pdf_text) ---\nCentre for Military Airworthiness and Certification\nFORM - 44\nDEFECT INVESTIGATION REPORT FORMAT\nPart - III: (Defect Details)\na) Defect Category: Mission Critical\nb) Defect Observed: Fastener hole elongation. Defect found during scheduled maintenance.\nPart IV: Investigation: (Details of Examination including previous similar Defects)\na) Root Cause Analysis: Design limitation in component load capacity under extreme conditions\nb) Findings / Conclusions: Detailed investigation conducted on the defective Access Panels component. Functional\ntesting confirmed the reported anomaly.\nc) Remedial Measures Update software to latest certified version with bug fixes\ni. Corrective Action:\nii. Preventive Action: Modify design to incorporate additional safety margin\nd) Attributable Code: R - Lapses on the part of Repair Agency/Manufacturer\nRemarks: Thorough...",
+  "processed_ts": "2025-12-12T16:55:04.074627"
+}

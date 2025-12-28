@@ -1,0 +1,24 @@
+# Python
+venv/
+__pycache__/
+*.pyc
+
+# ML / Torch
+*.dll
+*.so
+*.whl
+torch/
+
+# Environment
+.env
+
+# Cache
+.cache/
+.ipynb_checkpoints/
+
+# Model artifacts
+*.pkl
+
+# OS
+.DS_Store
+Thumbs.db
